@@ -46,7 +46,7 @@
             this.PrimeroTtoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AnteriroToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.SiguienteToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.PrimeroToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.UltimoToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ModificarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.NuevoToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -56,6 +56,8 @@
             this.BuscarToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.iDClienteTextBox = new System.Windows.Forms.TextBox();
             this.iDTipoDocumentoComboBox = new System.Windows.Forms.ComboBox();
+            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dSALl = new Login.DSAll.DSALl();
             this.documentoTextBox = new System.Windows.Forms.TextBox();
             this.nombreComercialTextBox = new System.Windows.Forms.TextBox();
             this.nombresContactoTextBox = new System.Windows.Forms.TextBox();
@@ -67,8 +69,6 @@
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.aniversarioDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.clientesDataGridView = new System.Windows.Forms.DataGridView();
-            this.dSALl = new Login.DSAll.DSALl();
-            this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tipoDocumentoTableAdapter = new Login.DSAll.DSALlTableAdapters.TipoDocumentoTableAdapter();
             iDClienteLabel = new System.Windows.Forms.Label();
             iDTipoDocumentoLabel = new System.Windows.Forms.Label();
@@ -83,9 +83,9 @@
             notasLabel = new System.Windows.Forms.Label();
             aniversarioLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSALl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSALl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // iDClienteLabel
@@ -202,7 +202,7 @@
             this.PrimeroTtoolStripButton,
             this.AnteriroToolStripButton,
             this.SiguienteToolStripButton,
-            this.PrimeroToolStripButton,
+            this.UltimoToolStripButton,
             this.toolStripSeparator1,
             this.ModificarToolStripButton,
             this.NuevoToolStripButton,
@@ -224,6 +224,7 @@
             this.PrimeroTtoolStripButton.Name = "PrimeroTtoolStripButton";
             this.PrimeroTtoolStripButton.Size = new System.Drawing.Size(23, 22);
             this.PrimeroTtoolStripButton.Text = "toolStripButton1";
+            this.PrimeroTtoolStripButton.Click += new System.EventHandler(this.PrimeroTtoolStripButton_Click);
             // 
             // AnteriroToolStripButton
             // 
@@ -233,6 +234,7 @@
             this.AnteriroToolStripButton.Name = "AnteriroToolStripButton";
             this.AnteriroToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AnteriroToolStripButton.Text = "toolStripButton2";
+            this.AnteriroToolStripButton.Click += new System.EventHandler(this.AnteriroToolStripButton_Click);
             // 
             // SiguienteToolStripButton
             // 
@@ -242,15 +244,17 @@
             this.SiguienteToolStripButton.Name = "SiguienteToolStripButton";
             this.SiguienteToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.SiguienteToolStripButton.Text = "toolStripButton3";
+            this.SiguienteToolStripButton.Click += new System.EventHandler(this.SiguienteToolStripButton_Click);
             // 
-            // PrimeroToolStripButton
+            // UltimoToolStripButton
             // 
-            this.PrimeroToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.PrimeroToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("PrimeroToolStripButton.Image")));
-            this.PrimeroToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.PrimeroToolStripButton.Name = "PrimeroToolStripButton";
-            this.PrimeroToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.PrimeroToolStripButton.Text = "toolStripButton4";
+            this.UltimoToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UltimoToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("UltimoToolStripButton.Image")));
+            this.UltimoToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UltimoToolStripButton.Name = "UltimoToolStripButton";
+            this.UltimoToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.UltimoToolStripButton.Text = "toolStripButton4";
+            this.UltimoToolStripButton.Click += new System.EventHandler(this.UltimoToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 
@@ -265,6 +269,7 @@
             this.ModificarToolStripButton.Name = "ModificarToolStripButton";
             this.ModificarToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ModificarToolStripButton.Text = "toolStripButton5";
+            this.ModificarToolStripButton.Click += new System.EventHandler(this.ModificarToolStripButton_Click);
             // 
             // NuevoToolStripButton
             // 
@@ -274,6 +279,7 @@
             this.NuevoToolStripButton.Name = "NuevoToolStripButton";
             this.NuevoToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.NuevoToolStripButton.Text = "toolStripButton6";
+            this.NuevoToolStripButton.Click += new System.EventHandler(this.NuevoToolStripButton_Click);
             // 
             // BorrarToolStripButton
             // 
@@ -283,6 +289,7 @@
             this.BorrarToolStripButton.Name = "BorrarToolStripButton";
             this.BorrarToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.BorrarToolStripButton.Text = "toolStripButton7";
+            this.BorrarToolStripButton.Click += new System.EventHandler(this.BorrarToolStripButton_Click);
             // 
             // GuardarToolStripButton
             // 
@@ -292,6 +299,7 @@
             this.GuardarToolStripButton.Name = "GuardarToolStripButton";
             this.GuardarToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.GuardarToolStripButton.Text = "toolStripButton8";
+            this.GuardarToolStripButton.Click += new System.EventHandler(this.GuardarToolStripButton_Click);
             // 
             // CancelarToolStripButton
             // 
@@ -301,6 +309,7 @@
             this.CancelarToolStripButton.Name = "CancelarToolStripButton";
             this.CancelarToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.CancelarToolStripButton.Text = "toolStripButton9";
+            this.CancelarToolStripButton.Click += new System.EventHandler(this.CancelarToolStripButton_Click);
             // 
             // BuscarToolStripButton
             // 
@@ -310,6 +319,7 @@
             this.BuscarToolStripButton.Name = "BuscarToolStripButton";
             this.BuscarToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.BuscarToolStripButton.Text = "toolStripButton10";
+            this.BuscarToolStripButton.Click += new System.EventHandler(this.BuscarToolStripButton_Click);
             // 
             // iDClienteTextBox
             // 
@@ -328,6 +338,16 @@
             this.iDTipoDocumentoComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDTipoDocumentoComboBox.TabIndex = 5;
             this.iDTipoDocumentoComboBox.ValueMember = "IDTipoDocumento";
+            // 
+            // tipoDocumentoBindingSource
+            // 
+            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
+            this.tipoDocumentoBindingSource.DataSource = this.dSALl;
+            // 
+            // dSALl
+            // 
+            this.dSALl.DataSetName = "DSALl";
+            this.dSALl.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // documentoTextBox
             // 
@@ -408,21 +428,12 @@
             this.clientesDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.clientesDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.clientesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.clientesDataGridView.Location = new System.Drawing.Point(0, 221);
             this.clientesDataGridView.Name = "clientesDataGridView";
             this.clientesDataGridView.Size = new System.Drawing.Size(829, 231);
             this.clientesDataGridView.TabIndex = 26;
-            // 
-            // dSALl
-            // 
-            this.dSALl.DataSetName = "DSALl";
-            this.dSALl.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipoDocumentoBindingSource
-            // 
-            this.tipoDocumentoBindingSource.DataMember = "TipoDocumento";
-            this.tipoDocumentoBindingSource.DataSource = this.dSALl;
             // 
             // tipoDocumentoTableAdapter
             // 
@@ -464,9 +475,9 @@
             this.Load += new System.EventHandler(this.frmCliente_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dSALl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dSALl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,7 +489,7 @@
         private System.Windows.Forms.ToolStripButton PrimeroTtoolStripButton;
         private System.Windows.Forms.ToolStripButton AnteriroToolStripButton;
         private System.Windows.Forms.ToolStripButton SiguienteToolStripButton;
-        private System.Windows.Forms.ToolStripButton PrimeroToolStripButton;
+        private System.Windows.Forms.ToolStripButton UltimoToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton ModificarToolStripButton;
         private System.Windows.Forms.ToolStripButton NuevoToolStripButton;

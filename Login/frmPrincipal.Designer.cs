@@ -84,6 +84,7 @@
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "&Archivo";
+            this.archivoToolStripMenuItem.Click += new System.EventHandler(this.archivoToolStripMenuItem_Click);
             // 
             // bodegasToolStripMenuItem
             // 
@@ -109,6 +110,7 @@
             this.provedoresToolStripMenuItem.Name = "provedoresToolStripMenuItem";
             this.provedoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.provedoresToolStripMenuItem.Text = "P&rovedores";
+            this.provedoresToolStripMenuItem.Click += new System.EventHandler(this.provedoresToolStripMenuItem_Click);
             // 
             // tipoDocumentoToolStripMenuItem
             // 
