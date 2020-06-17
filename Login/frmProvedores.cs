@@ -57,26 +57,40 @@ namespace Login
 
         private void addNewITembindingNavigator_Click(object sender, EventArgs e)
         {
-           
-
-
+            HabilitarCampos();
+            proveedorBindingSource.AddNew();
+            nombresContactoTextBox.Focus();
         }
 
         private void deleteItemBindingNavigator_Click(object sender, EventArgs e)
         {
+            DialogResult rta = MessageBox.Show("Estas Segura de borar el registro actual", "Comfimar",
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (rta == DialogResult.No) return;
+            proveedorBindingSource.RemoveAt(proveedorBindingSource.Position);
+            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+
 
         }
         private void saveItemBindingNavigator_Click(object sender, EventArgs e)
         {
+            if (!validarCampos()) return; ;
             this.Validate();
             this.proveedorBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+            deshabilitarCampos();
         }
+
+      
 
         private void cancelItemBindingNavigator_Click(object sender, EventArgs e)
         {
-
+            this.proveedorBindingSource.CancelEdit();
+            deshabilitarCampos();
+            errorProvider1.Clear();
         }
+
+       
 
         private void searchBindingNavigator_Click(object sender, EventArgs e)
         {
@@ -108,7 +122,91 @@ namespace Login
             cancelItemBindingNavigator.Enabled = true;           
             searchBindingNavigator.Enabled = false;
 
-        }                                                                                                                                                                                                                                                                                    
+        }
+
+        private void deshabilitarCampos()
+        {
+            iDTipoDocumentoComboBox.Enabled = false;
+            nombresContactoTextBox.ReadOnly = true;
+            nombreTextBox.ReadOnly = true;
+            telefono1TextBox.ReadOnly = true;
+            telefono2TextBox.ReadOnly = true;
+            documentoTextBox.ReadOnly = true;
+            direccionTextBox.ReadOnly = true;
+            correoTextBox.ReadOnly = true;
+            notasTextBox.ReadOnly = true;
+
+            firstItemBindingNavigator.Enabled = true;
+            previousItemBindingNavigator.Enabled = true;
+            nextItemBindingNavigator.Enabled = true;
+            lastItemBindingNavigator.Enabled = true;
+            editItemBindingNavigator.Enabled = true;
+            addNewITembindingNavigator.Enabled = true;
+            deleteItemBindingNavigator.Enabled = true;
+            saveItemBindingNavigator.Enabled = false;
+            cancelItemBindingNavigator.Enabled = false;
+            searchBindingNavigator.Enabled = true;
+
+        }
+        private bool validarCampos()
+        {
+            if (iDTipoDocumentoComboBox.SelectedIndex == -1)
+            {
+                errorProvider1.SetError(iDTipoDocumentoComboBox,"Debes Escoger Un Tipo De Documento");
+                iDTipoDocumentoComboBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (nombresContactoTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(nombresContactoTextBox, "Debes Ingrsar Nombre De Contacto");
+                nombresContactoTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (apellidosContactoTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(apellidosContactoTextBox, "Debe Ingresar Apellido");
+                apellidosContactoTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (nombreTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(nombreTextBox, "Debe Ingresar Nombre");
+                nombreTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (documentoTextBox.Text == string.Empty)
+            {
+                errorProvider1.SetError(documentoTextBox, "Debe Ingresasr Documento");
+                documentoTextBox.Focus();
+                return false;
+            }
+            errorProvider1.Clear();
+
+            if (correoTextBox.Text != string.Empty)
+            {
+                RegexUtilities regexUtilities = new RegexUtilities();
+                if (!regexUtilities.IsValidEmail(correoTextBox.Text))
+                {
+                    errorProvider1.SetError(correoTextBox, "Ingresa Correo Valido");
+                    correoTextBox.Focus();
+                    return false;
+                }
+                errorProvider1.Clear();
+            }
+
+
+
+            return true;
+
+        }
 
     }
 }

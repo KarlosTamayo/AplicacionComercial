@@ -33,5 +33,50 @@ namespace Login
             this.clienteTableAdapter.Fill(this.dSAplicacionComercial.Cliente);
 
         }
+
+        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addNewITemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cancelItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchBindingNavigator_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

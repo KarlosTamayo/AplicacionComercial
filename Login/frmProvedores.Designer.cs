@@ -87,6 +87,7 @@
             this.correoTextBox = new System.Windows.Forms.TextBox();
             this.notasTextBox = new System.Windows.Forms.TextBox();
             this.tipoDocumentoTableAdapter = new Login.DSAll.DSALlTableAdapters.TipoDocumentoTableAdapter();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             iDTipoDocumentoLabel = new System.Windows.Forms.Label();
             iDProveedorLabel = new System.Windows.Forms.Label();
             nombreLabel = new System.Windows.Forms.Label();
@@ -105,6 +106,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSALl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // iDTipoDocumentoLabel
@@ -232,10 +234,10 @@
             // 
             // proveedorBindingNavigator
             // 
-            this.proveedorBindingNavigator.AddNewItem = this.addNewITembindingNavigator;
+            this.proveedorBindingNavigator.AddNewItem = null;
             this.proveedorBindingNavigator.BindingSource = this.proveedorBindingSource;
             this.proveedorBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.proveedorBindingNavigator.DeleteItem = this.deleteItemBindingNavigator;
+            this.proveedorBindingNavigator.DeleteItem = null;
             this.proveedorBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.firstItemBindingNavigator,
             this.previousItemBindingNavigator,
@@ -628,6 +630,10 @@
             // 
             this.tipoDocumentoTableAdapter.ClearBeforeFill = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmProvedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -668,6 +674,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.proveedorDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSALl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -721,5 +728,6 @@
         private System.Windows.Forms.ToolStripButton editItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton cancelItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton searchBindingNavigator;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

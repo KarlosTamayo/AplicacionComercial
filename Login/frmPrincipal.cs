@@ -29,7 +29,7 @@ namespace Login
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCliente frm = new frmCliente();
+            frmCliente2 frm = new frmCliente2();
             frm.MdiParent = this;
             frm.Show();
         }
