@@ -636,7 +636,7 @@
             this.correoTextBox.ReadOnly = true;
             this.correoTextBox.Size = new System.Drawing.Size(100, 20);
             this.correoTextBox.TabIndex = 20;
-            // 
+           // 
             // notasTextBox
             // 
             this.notasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Notas", true));
@@ -651,6 +651,7 @@
             // aniversarioDateTimePicker
             // 
             this.aniversarioDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.clienteBindingSource, "Aniversario", true));
+            this.aniversarioDateTimePicker.Enabled = false;
             this.aniversarioDateTimePicker.Location = new System.Drawing.Point(384, 168);
             this.aniversarioDateTimePicker.Name = "aniversarioDateTimePicker";
             this.aniversarioDateTimePicker.Size = new System.Drawing.Size(200, 20);
