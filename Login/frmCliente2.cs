@@ -17,13 +17,7 @@ namespace Login
             InitializeComponent();
         }
 
-        private void clienteBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.clienteBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
-
-        }
+      
 
         private void frmCliente2_Load(object sender, EventArgs e)
         {
@@ -34,49 +28,134 @@ namespace Login
 
         }
 
-        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        private void firstItemBindingNavigator_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        private void previousItemBindingNavigator_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        private void NextItemBindingNavigator_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        private void LastItemBindingNavigator_Click(object sender, EventArgs e)
         {
 
         }
 
         private void editItemBindingNavigator_Click(object sender, EventArgs e)
         {
-
-        }
+            clienteBindingSource.AddNew();
+            nombresContactoTextBox.Focus();
+            HabilitarCampos();
+        }        
 
         private void addNewITemBindingNavigator_Click(object sender, EventArgs e)
         {
 
         }
 
+
         private void deleteItemBindingNavigator_Click(object sender, EventArgs e)
         {
+            DialogResult rta = MessageBox.Show("Estas Segura de borar el registro actual", "Comfimar",
+                                   MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            if (rta == DialogResult.No) return;
+           clienteBindingSource.RemoveAt(clienteBindingSource.Position);
+            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+
+        }
+
+        private void saveItemBindingNavigator_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.clienteBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.dSAplicacionComercial);
+            deshabilitarCampos();
+
 
         }
 
         private void cancelItemBindingNavigator_Click(object sender, EventArgs e)
         {
-
+            this.clienteBindingSource.CancelEdit();
+            deshabilitarCampos();
+            errorProvider1.Clear();
         }
+
 
         private void searchBindingNavigator_Click(object sender, EventArgs e)
         {
+            validarCampos()
+        }
 
+        //************************************************** Metodos **********************************************
+        private void HabilitarCampos()
+        {
+            iDClienteTextBox.ReadOnly = true;
+            iDTipoDocumentoComboBox.Enabled = false;
+            documentoTextBox.ReadOnly = false;
+            nombreComercialTextBox.ReadOnly = false;
+            nombresContactoTextBox.ReadOnly = false;
+            apellidosContactoTextBox.ReadOnly = false;
+            direccionTextBox.ReadOnly = false;
+            telefono1TextBox.ReadOnly = false;
+            telefono2TextBox.ReadOnly = false;
+            correoTextBox.ReadOnly = false;
+            aniversarioDateTimePicker.Enabled = true;
+            notasTextBox.ReadOnly = false;
+
+
+            firstItemBindingNavigator.Enabled = false;
+            previousItemBindingNavigator.Enabled = false;
+            NextItemBindingNavigator.Enabled = false;
+            LastItemBindingNavigator.Enabled = false;
+            editItemBindingNavigator.Enabled = false;
+            addNewITemBindingNavigator.Enabled = false;
+            deleteItemBindingNavigator.Enabled = false;
+            saveItemBindingNavigator.Enabled = true;
+            cancelItemBindingNavigator.Enabled = true;
+            searchBindingNavigator.Enabled = false;
+
+        }
+
+        private void deshabilitarCampos()
+        {
+            iDClienteTextBox.ReadOnly = true;
+            iDTipoDocumentoComboBox.Enabled = false;
+            documentoTextBox.ReadOnly = true;
+            nombreComercialTextBox.ReadOnly = true;
+            nombresContactoTextBox.ReadOnly = true;
+            apellidosContactoTextBox.ReadOnly = true;
+            direccionTextBox.ReadOnly = true;
+            telefono1TextBox.ReadOnly = true;
+            telefono2TextBox.ReadOnly = true;
+            correoTextBox.ReadOnly = true;
+            aniversarioDateTimePicker.Enabled = true;
+            notasTextBox.ReadOnly = true;
+
+
+            firstItemBindingNavigator.Enabled = true;
+            previousItemBindingNavigator.Enabled = true;
+            NextItemBindingNavigator.Enabled = true;
+            LastItemBindingNavigator.Enabled = true;
+            editItemBindingNavigator.Enabled = true;
+            addNewITemBindingNavigator.Enabled = true;
+            deleteItemBindingNavigator.Enabled = true;
+            saveItemBindingNavigator.Enabled = false;
+            cancelItemBindingNavigator.Enabled = false;
+            searchBindingNavigator.Enabled = true;
+          
+        }
+
+        private void validarCampos()
+        {
+            
         }
     }
 }
