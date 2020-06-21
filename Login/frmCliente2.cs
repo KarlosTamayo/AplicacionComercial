@@ -204,12 +204,18 @@ namespace Login
                     correoTextBox.Focus();
                     return false;
                 }
-                errorProvider1.Clear();
-
-
-                return true;
-
+                errorProvider1.Clear();               
             }
+
+
+
+
+
+
+
+
+            return true;
+
         }
     }
 }

@@ -94,6 +94,9 @@ namespace Login
 
         private void searchBindingNavigator_Click(object sender, EventArgs e)
         {
+            fmrBusquedaProveedores frm = new fmrBusquedaProveedores();
+            frm.ShowDialog();
+            
 
         }
 
