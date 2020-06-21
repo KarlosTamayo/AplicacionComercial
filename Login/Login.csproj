@@ -186,5 +186,26 @@
   <ItemGroup>
     <None Include="Resources\ic_arrow_forward.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refr 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refr 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptarinicio 32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32cancelitem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32cerrar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
