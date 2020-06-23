@@ -92,7 +92,9 @@ namespace Login
 
         private void searchBindingNavigator_Click(object sender, EventArgs e)
         {
-            
+            frmBusquedaCliente2 frm = new frmBusquedaCliente2();
+            frm.ShowDialog();
+            //frm.Show();
         }
 
         //************************************************** Metodos **********************************************

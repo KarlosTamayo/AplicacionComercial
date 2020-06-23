@@ -46,9 +46,7 @@
             this.proveedorTableAdapter = new Login.DS.DSAplicacionComercialTableAdapters.ProveedorTableAdapter();
             this.tableAdapterManager = new Login.DS.DSAplicacionComercialTableAdapters.TableAdapterManager();
             this.proveedorBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.addNewITembindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.deleteItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.firstItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.previousItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -58,6 +56,8 @@
             this.lastItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.editItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
+            this.addNewITembindingNavigator = new System.Windows.Forms.ToolStripButton();
+            this.deleteItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.saveItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.cancelItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.searchBindingNavigator = new System.Windows.Forms.ToolStripButton();
@@ -265,32 +265,12 @@
             this.proveedorBindingNavigator.TabIndex = 0;
             this.proveedorBindingNavigator.Text = "bindingNavigator1";
             // 
-            // addNewITembindingNavigator
-            // 
-            this.addNewITembindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.addNewITembindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("addNewITembindingNavigator.Image")));
-            this.addNewITembindingNavigator.Name = "addNewITembindingNavigator";
-            this.addNewITembindingNavigator.RightToLeftAutoMirrorImage = true;
-            this.addNewITembindingNavigator.Size = new System.Drawing.Size(23, 22);
-            this.addNewITembindingNavigator.Text = "Add new";
-            this.addNewITembindingNavigator.Click += new System.EventHandler(this.addNewITembindingNavigator_Click);
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // deleteItemBindingNavigator
-            // 
-            this.deleteItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.deleteItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("deleteItemBindingNavigator.Image")));
-            this.deleteItemBindingNavigator.Name = "deleteItemBindingNavigator";
-            this.deleteItemBindingNavigator.RightToLeftAutoMirrorImage = true;
-            this.deleteItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
-            this.deleteItemBindingNavigator.Text = "Delete";
-            this.deleteItemBindingNavigator.Click += new System.EventHandler(this.deleteItemBindingNavigator_Click);
             // 
             // firstItemBindingNavigator
             // 
@@ -367,6 +347,26 @@
             this.editItemBindingNavigator.Text = "toolStripButton1";
             this.editItemBindingNavigator.Click += new System.EventHandler(this.editItemBindingNavigator_Click);
             // 
+            // addNewITembindingNavigator
+            // 
+            this.addNewITembindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.addNewITembindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("addNewITembindingNavigator.Image")));
+            this.addNewITembindingNavigator.Name = "addNewITembindingNavigator";
+            this.addNewITembindingNavigator.RightToLeftAutoMirrorImage = true;
+            this.addNewITembindingNavigator.Size = new System.Drawing.Size(23, 22);
+            this.addNewITembindingNavigator.Text = "Add new";
+            this.addNewITembindingNavigator.Click += new System.EventHandler(this.addNewITembindingNavigator_Click);
+            // 
+            // deleteItemBindingNavigator
+            // 
+            this.deleteItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.deleteItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("deleteItemBindingNavigator.Image")));
+            this.deleteItemBindingNavigator.Name = "deleteItemBindingNavigator";
+            this.deleteItemBindingNavigator.RightToLeftAutoMirrorImage = true;
+            this.deleteItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
+            this.deleteItemBindingNavigator.Text = "Delete";
+            this.deleteItemBindingNavigator.Click += new System.EventHandler(this.deleteItemBindingNavigator_Click);
+            // 
             // saveItemBindingNavigator
             // 
             this.saveItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -409,6 +409,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.proveedorDataGridView.AutoGenerateColumns = false;
+            this.proveedorDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.proveedorDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.proveedorDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,

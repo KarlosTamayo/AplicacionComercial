@@ -96,8 +96,10 @@ namespace Login
         {
             fmrBusquedaProveedores frm = new fmrBusquedaProveedores();
             frm.ShowDialog();
-            
-
+            //MessageBox.Show("hola:" + frm.Idproveedor);
+            if (frm.Idproveedor == 0) return;
+            int posicion = proveedorBindingSource.Find("IDProveedor", frm.Idproveedor);
+            proveedorBindingSource.Position = posicion;
         }
 
 

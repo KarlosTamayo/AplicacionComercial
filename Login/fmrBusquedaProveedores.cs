@@ -12,6 +12,10 @@ namespace Login
 {
     public partial class fmrBusquedaProveedores : Form
     {
+        private int idproveedor;
+
+        public int Idproveedor { get => idproveedor;  }
+
         public fmrBusquedaProveedores()
         {
             InitializeComponent();
@@ -57,10 +61,6 @@ namespace Login
                 apellidosContacto =  apellidosContactoToolStripTextBox.Text;
             }
 
-
-
-
-
             try
             {
                 this.proveedorTableAdapter.BusquedaProveedor(this.dSAplicacionComercial.Proveedor,
@@ -81,6 +81,31 @@ namespace Login
             nombresContactoToolStripTextBox.Text = string.Empty;
             apellidosContactoToolStripTextBox.Text = string.Empty;
             busquedaProveedorToolStripButton_Click(sender, e);
+        }
+
+        private void buscarButton_Click(object sender, EventArgs e)
+        {
+            if (proveedorDataGridView.Rows.Count == 0)
+            {
+                idproveedor = 0;        
+          
+            }
+            else if (proveedorDataGridView.SelectedRows.Count != 0)
+            {
+                idproveedor = (int)proveedorDataGridView.Rows[0].Cells[0].Value;
+            }
+            else
+            {
+                idproveedor = (int)proveedorDataGridView.Rows[0].Cells[0].Value;
+            }
+            this.Close();
+        }  
+
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            idproveedor = 0;
+            this.Close();
         }
     }
 
