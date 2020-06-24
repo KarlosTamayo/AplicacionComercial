@@ -83,9 +83,29 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32x32cerrar1 {
+            get {
+                object obj = ResourceManager.GetObject("32x32cerrar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aceptarinicio_32x32 {
             get {
                 object obj = ResourceManager.GetObject("aceptarinicio 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aceptarinicio_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("aceptarinicio 32x321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,26 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap refr_32x321 {
             get {
                 object obj = ResourceManager.GetObject("refr 32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap refresch1_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("refresch1 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search1_32x32 {
+            get {
+                object obj = ResourceManager.GetObject("search1 32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

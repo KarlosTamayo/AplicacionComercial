@@ -25,5 +25,57 @@ namespace Login
             this.clienteTableAdapter.Fill(this.dSAplicacionComercial.Cliente);
 
         }
+
+        private void busquedaCliente2ToolStripButton_Click(object sender, EventArgs e)
+        {
+            string nombreComercial, nombresContacto, apellidosContacto;
+
+            if (contengaRadioButton.Checked == true)
+            {
+                nombreComercial = "%" + nombreComercialToolStripTextBox.Text + "%";
+                nombresContacto = "%" + nombresContactoToolStripTextBox.Text + "%";
+                apellidosContacto = "%" + apellidosContactoToolStripTextBox.Text + "%";
+
+            }
+            else if (empieceRadioButton.Checked == true)
+            {
+                nombreComercial = nombreComercialToolStripTextBox.Text + "%";
+                nombresContacto = nombresContactoToolStripTextBox.Text + "%";
+                apellidosContacto = apellidosContactoToolStripTextBox.Text + "%";
+
+            }
+            else if (termineRadioButton.Checked == true)
+            {
+                nombreComercial = "%" + nombreComercialToolStripTextBox.Text;
+                nombresContacto = "%" + nombresContactoToolStripTextBox.Text;
+                apellidosContacto = "%" + apellidosContactoToolStripTextBox.Text;
+            }
+            else
+            {
+                nombreComercial = nombreComercialToolStripTextBox.Text;
+                nombresContacto = nombresContactoToolStripTextBox.Text;
+                apellidosContacto = apellidosContactoToolStripTextBox.Text;
+            }
+            try
+            {
+                this.clienteTableAdapter.BusquedaCliente2(this.dSAplicacionComercial.Cliente, 
+                    nombreComercial, 
+                    nombresContacto,
+                    apellidosContacto);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void reiniciarButton_Click(object sender, EventArgs e)
+        {
+            nombreComercialToolStripTextBox.Text = string.Empty;
+            nombresContactoToolStripTextBox.Text = string.Empty;
+            apellidosContactoToolStripTextBox.Text = string.Empty;
+            busquedaCliente2ToolStripButton_Click(sender, e);
+        }
     }
 }
