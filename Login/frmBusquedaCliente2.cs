@@ -12,6 +12,10 @@ namespace Login
 {
     public partial class frmBusquedaCliente2 : Form
     {
+        private int idCliente2;
+
+        public int IdCliente2 { get => idCliente2;  }
+
         public frmBusquedaCliente2()
         {
             InitializeComponent();
@@ -76,6 +80,30 @@ namespace Login
             nombresContactoToolStripTextBox.Text = string.Empty;
             apellidosContactoToolStripTextBox.Text = string.Empty;
             busquedaCliente2ToolStripButton_Click(sender, e);
+        }
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            idCliente2 = 0;
+            this.Close();
+        }
+
+        private void buscarButton_Click(object sender, EventArgs e)
+        {
+            if (Cliente2DataGridView.Rows.Count == 0)
+            {
+                idCliente2 = 0;
+
+            }
+            else if (Cliente2DataGridView.SelectedRows.Count != 0)
+            {
+                idCliente2 = (int)Cliente2DataGridView.Rows[0].Cells[0].Value;
+            }
+            else
+            {
+                idCliente2 = (int)Cliente2DataGridView.Rows[0].Cells[0].Value;
+            }
+            this.Close();
         }
     }
 }

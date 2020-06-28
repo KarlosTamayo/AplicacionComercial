@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.empieceRataGridView = new System.Windows.Forms.DataGridView();
+            this.Cliente2DataGridView = new System.Windows.Forms.DataGridView();
             this.iDClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDTipoDocumentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.tipoDocumentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -60,9 +60,9 @@
             this.termineRadioButton = new System.Windows.Forms.RadioButton();
             this.empieceRadioButton = new System.Windows.Forms.RadioButton();
             this.contengaRadioButton = new System.Windows.Forms.RadioButton();
-            this.aceptarButton = new System.Windows.Forms.Button();
+            this.buscarButton = new System.Windows.Forms.Button();
             this.cancelarButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.empieceRataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cliente2DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
@@ -70,14 +70,14 @@
             this.eleccionGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // empieceRataGridView
+            // Cliente2DataGridView
             // 
-            this.empieceRataGridView.AllowUserToAddRows = false;
-            this.empieceRataGridView.AllowUserToDeleteRows = false;
-            this.empieceRataGridView.AllowUserToOrderColumns = true;
-            this.empieceRataGridView.AutoGenerateColumns = false;
-            this.empieceRataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empieceRataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Cliente2DataGridView.AllowUserToAddRows = false;
+            this.Cliente2DataGridView.AllowUserToDeleteRows = false;
+            this.Cliente2DataGridView.AllowUserToOrderColumns = true;
+            this.Cliente2DataGridView.AutoGenerateColumns = false;
+            this.Cliente2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Cliente2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDClienteDataGridViewTextBoxColumn,
             this.iDTipoDocumentoDataGridViewTextBoxColumn,
             this.documentoDataGridViewTextBoxColumn,
@@ -90,12 +90,12 @@
             this.correoDataGridViewTextBoxColumn,
             this.notasDataGridViewTextBoxColumn,
             this.aniversarioDataGridViewTextBoxColumn});
-            this.empieceRataGridView.DataSource = this.clienteBindingSource;
-            this.empieceRataGridView.Location = new System.Drawing.Point(2, 204);
-            this.empieceRataGridView.Name = "empieceRataGridView";
-            this.empieceRataGridView.ReadOnly = true;
-            this.empieceRataGridView.Size = new System.Drawing.Size(798, 248);
-            this.empieceRataGridView.TabIndex = 0;
+            this.Cliente2DataGridView.DataSource = this.clienteBindingSource;
+            this.Cliente2DataGridView.Location = new System.Drawing.Point(2, 204);
+            this.Cliente2DataGridView.Name = "Cliente2DataGridView";
+            this.Cliente2DataGridView.ReadOnly = true;
+            this.Cliente2DataGridView.Size = new System.Drawing.Size(798, 248);
+            this.Cliente2DataGridView.TabIndex = 0;
             // 
             // iDClienteDataGridViewTextBoxColumn
             // 
@@ -328,17 +328,18 @@
             this.contengaRadioButton.Text = "Contenga";
             this.contengaRadioButton.UseVisualStyleBackColor = true;
             // 
-            // aceptarButton
+            // buscarButton
             // 
-            this.aceptarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.aceptarButton.FlatAppearance.BorderSize = 0;
-            this.aceptarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aceptarButton.Image = global::Login.Properties.Resources.aceptarinicio_32x321;
-            this.aceptarButton.Location = new System.Drawing.Point(484, 70);
-            this.aceptarButton.Name = "aceptarButton";
-            this.aceptarButton.Size = new System.Drawing.Size(75, 42);
-            this.aceptarButton.TabIndex = 3;
-            this.aceptarButton.UseVisualStyleBackColor = true;
+            this.buscarButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buscarButton.FlatAppearance.BorderSize = 0;
+            this.buscarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarButton.Image = global::Login.Properties.Resources.aceptarinicio_32x321;
+            this.buscarButton.Location = new System.Drawing.Point(484, 70);
+            this.buscarButton.Name = "buscarButton";
+            this.buscarButton.Size = new System.Drawing.Size(75, 42);
+            this.buscarButton.TabIndex = 3;
+            this.buscarButton.UseVisualStyleBackColor = true;
+            this.buscarButton.Click += new System.EventHandler(this.buscarButton_Click);
             // 
             // cancelarButton
             // 
@@ -351,6 +352,7 @@
             this.cancelarButton.Size = new System.Drawing.Size(75, 47);
             this.cancelarButton.TabIndex = 4;
             this.cancelarButton.UseVisualStyleBackColor = true;
+            this.cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
             // frmBusquedaCliente2
             // 
@@ -358,14 +360,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(820, 472);
             this.Controls.Add(this.cancelarButton);
-            this.Controls.Add(this.aceptarButton);
+            this.Controls.Add(this.buscarButton);
             this.Controls.Add(this.eleccionGroupBox);
             this.Controls.Add(this.busquedaCliente2ToolStrip);
-            this.Controls.Add(this.empieceRataGridView);
+            this.Controls.Add(this.Cliente2DataGridView);
             this.Name = "frmBusquedaCliente2";
             this.Text = "frmBusquedaCliente2";
             this.Load += new System.EventHandler(this.frmBusquedaCliente2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.empieceRataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Cliente2DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipoDocumentoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dSAplicacionComercial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
@@ -380,7 +382,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView empieceRataGridView;
+        private System.Windows.Forms.DataGridView Cliente2DataGridView;
         private DS.DSAplicacionComercial dSAplicacionComercial;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private DS.DSAplicacionComercialTableAdapters.ClienteTableAdapter clienteTableAdapter;
@@ -411,7 +413,7 @@
         private System.Windows.Forms.RadioButton empieceRadioButton;
         private System.Windows.Forms.RadioButton contengaRadioButton;
         private System.Windows.Forms.Button reiniciarButton;
-        private System.Windows.Forms.Button aceptarButton;
+        private System.Windows.Forms.Button buscarButton;
         private System.Windows.Forms.Button cancelarButton;
     }
 }

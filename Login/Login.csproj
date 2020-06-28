@@ -87,11 +87,23 @@
     <Compile Include="frmCliente2.Designer.cs">
       <DependentUpon>frmCliente2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin1.Designer.cs">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalMDI.Designer.cs">
+      <DependentUpon>frmPrincipalMDI.cs</DependentUpon>
     </Compile>
     <Compile Include="frmProvedores.cs">
       <SubType>Form</SubType>
@@ -120,8 +132,14 @@
     <EmbeddedResource Include="frmCliente2.resx">
       <DependentUpon>frmCliente2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin1.resx">
+      <DependentUpon>frmLogin1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalMDI.resx">
+      <DependentUpon>frmPrincipalMDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProvedores.resx">
       <DependentUpon>frmProvedores.cs</DependentUpon>
@@ -227,6 +245,105 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\32x32cerrar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aceptarinicio 32x322.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32cerrar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buhoLogoOriginal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\256256.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\256x256_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20x20_cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32minimizarColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32minimizarTransparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar32x32transparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar32x32transparente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar32x32transparante.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\miximed-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar32x32Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar32x32Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32minimizarColor1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo2x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bodegaNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clientesNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\productosNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\provedor20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tipoDocumentoNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\canbioUsuario20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cambioClave20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salirNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movimientosNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras 20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devoluciones20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trasladosNegro20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salidas20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buho-orignal-sinDonfondo-letrasBlancas.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

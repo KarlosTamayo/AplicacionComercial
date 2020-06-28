@@ -45,5 +45,17 @@ namespace Login
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPrincipalMDIToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalMDI frm = new frmPrincipalMDI();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }
