@@ -383,6 +383,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap k {
+            get {
+                object obj = ResourceManager.GetObject("k", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu_32x32 {
             get {
                 object obj = ResourceManager.GetObject("menu-32x32", resourceCulture);
@@ -566,6 +576,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap usuario20x20 {
             get {
                 object obj = ResourceManager.GetObject("usuario20x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ventas_20x20 {
+            get {
+                object obj = ResourceManager.GetObject("ventas 20x20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -36,13 +36,8 @@
             this.restaurarPictureBox = new System.Windows.Forms.PictureBox();
             this.maximizarPictureBox = new System.Windows.Forms.PictureBox();
             this.cerrarPictureBox = new System.Windows.Forms.PictureBox();
-            this.slidePictureBox = new System.Windows.Forms.PictureBox();
             this.menuVerticalPanel = new System.Windows.Forms.Panel();
             this.movimientoPanel = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.salidasButton = new System.Windows.Forms.Button();
             this.traladosButton = new System.Windows.Forms.Button();
             this.devolucionesButton = new System.Windows.Forms.Button();
@@ -57,21 +52,28 @@
             this.productosButton = new System.Windows.Forms.Button();
             this.clienteButton = new System.Windows.Forms.Button();
             this.bodegaButton = new System.Windows.Forms.Button();
-            this.servicioButton = new System.Windows.Forms.Button();
+            this.archivoButton = new System.Windows.Forms.Button();
             this.logoPanel = new System.Windows.Forms.Panel();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
+            this.slidePictureBox = new System.Windows.Forms.PictureBox();
+            this.reportesButton = new System.Windows.Forms.Button();
+            this.reportesPanel = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.inventarioButton = new System.Windows.Forms.Button();
+            this.ventasButton = new System.Windows.Forms.Button();
             this.pricipalPanel.SuspendLayout();
             this.tituloPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.minimizarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).BeginInit();
             this.menuVerticalPanel.SuspendLayout();
             this.movimientoPanel.SuspendLayout();
             this.archivoSubMenuPanel.SuspendLayout();
             this.logoPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).BeginInit();
+            this.reportesPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // pricipalPanel
@@ -82,16 +84,16 @@
             this.pricipalPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pricipalPanel.Location = new System.Drawing.Point(0, 0);
             this.pricipalPanel.Name = "pricipalPanel";
-            this.pricipalPanel.Size = new System.Drawing.Size(1330, 650);
+            this.pricipalPanel.Size = new System.Drawing.Size(1000, 720);
             this.pricipalPanel.TabIndex = 0;
             // 
             // contenedorPanel
             // 
             this.contenedorPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(57)))), ((int)(((byte)(80)))));
             this.contenedorPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contenedorPanel.Location = new System.Drawing.Point(200, 50);
+            this.contenedorPanel.Location = new System.Drawing.Point(200, 40);
             this.contenedorPanel.Name = "contenedorPanel";
-            this.contenedorPanel.Size = new System.Drawing.Size(1130, 600);
+            this.contenedorPanel.Size = new System.Drawing.Size(800, 680);
             this.contenedorPanel.TabIndex = 2;
             // 
             // tituloPanel
@@ -105,7 +107,7 @@
             this.tituloPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.tituloPanel.Location = new System.Drawing.Point(200, 0);
             this.tituloPanel.Name = "tituloPanel";
-            this.tituloPanel.Size = new System.Drawing.Size(1130, 50);
+            this.tituloPanel.Size = new System.Drawing.Size(800, 40);
             this.tituloPanel.TabIndex = 1;
             this.tituloPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tituloPanel_MouseDown);
             // 
@@ -114,7 +116,7 @@
             this.minimizarPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.minimizarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.minimizarPictureBox.Image = global::Login.Properties.Resources._32x32minimizarColor1;
-            this.minimizarPictureBox.Location = new System.Drawing.Point(1010, 12);
+            this.minimizarPictureBox.Location = new System.Drawing.Point(682, 3);
             this.minimizarPictureBox.Name = "minimizarPictureBox";
             this.minimizarPictureBox.Size = new System.Drawing.Size(32, 32);
             this.minimizarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,12 +129,13 @@
             this.restaurarPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.restaurarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.restaurarPictureBox.Image = global::Login.Properties.Resources.miximed_32x32;
-            this.restaurarPictureBox.Location = new System.Drawing.Point(1050, 11);
+            this.restaurarPictureBox.Location = new System.Drawing.Point(720, 4);
             this.restaurarPictureBox.Name = "restaurarPictureBox";
             this.restaurarPictureBox.Size = new System.Drawing.Size(32, 32);
             this.restaurarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.restaurarPictureBox.TabIndex = 3;
             this.restaurarPictureBox.TabStop = false;
+            this.restaurarPictureBox.Visible = false;
             this.restaurarPictureBox.Click += new System.EventHandler(this.restaurarPictureBox_Click);
             // 
             // maximizarPictureBox
@@ -140,130 +143,55 @@
             this.maximizarPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maximizarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.maximizarPictureBox.Image = global::Login.Properties.Resources.restaurar32x32Color;
-            this.maximizarPictureBox.Location = new System.Drawing.Point(1050, 11);
+            this.maximizarPictureBox.Location = new System.Drawing.Point(720, 3);
             this.maximizarPictureBox.Name = "maximizarPictureBox";
             this.maximizarPictureBox.Size = new System.Drawing.Size(32, 32);
             this.maximizarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.maximizarPictureBox.TabIndex = 2;
             this.maximizarPictureBox.TabStop = false;
+            this.maximizarPictureBox.Click += new System.EventHandler(this.maximizarPictureBox_Click_1);
             // 
             // cerrarPictureBox
             // 
             this.cerrarPictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cerrarPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cerrarPictureBox.Image = global::Login.Properties.Resources.cerrar32x32Color;
-            this.cerrarPictureBox.Location = new System.Drawing.Point(1091, 12);
+            this.cerrarPictureBox.Location = new System.Drawing.Point(761, 4);
             this.cerrarPictureBox.Name = "cerrarPictureBox";
             this.cerrarPictureBox.Size = new System.Drawing.Size(32, 32);
             this.cerrarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cerrarPictureBox.TabIndex = 1;
             this.cerrarPictureBox.TabStop = false;
-            // 
-            // slidePictureBox
-            // 
-            this.slidePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.slidePictureBox.Image = global::Login.Properties.Resources.menu_32x32;
-            this.slidePictureBox.Location = new System.Drawing.Point(0, 3);
-            this.slidePictureBox.Name = "slidePictureBox";
-            this.slidePictureBox.Size = new System.Drawing.Size(58, 50);
-            this.slidePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.slidePictureBox.TabIndex = 0;
-            this.slidePictureBox.TabStop = false;
-            this.slidePictureBox.Click += new System.EventHandler(this.slidePictureBox_Click);
+            this.cerrarPictureBox.Click += new System.EventHandler(this.cerrarPictureBox_Click_1);
             // 
             // menuVerticalPanel
             // 
             this.menuVerticalPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.menuVerticalPanel.Controls.Add(this.reportesPanel);
+            this.menuVerticalPanel.Controls.Add(this.reportesButton);
             this.menuVerticalPanel.Controls.Add(this.movimientoPanel);
             this.menuVerticalPanel.Controls.Add(this.movimientoButton);
             this.menuVerticalPanel.Controls.Add(this.archivoSubMenuPanel);
-            this.menuVerticalPanel.Controls.Add(this.servicioButton);
+            this.menuVerticalPanel.Controls.Add(this.archivoButton);
             this.menuVerticalPanel.Controls.Add(this.logoPanel);
             this.menuVerticalPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVerticalPanel.Location = new System.Drawing.Point(0, 0);
             this.menuVerticalPanel.Name = "menuVerticalPanel";
-            this.menuVerticalPanel.Size = new System.Drawing.Size(200, 650);
+            this.menuVerticalPanel.Size = new System.Drawing.Size(200, 720);
             this.menuVerticalPanel.TabIndex = 0;
             // 
             // movimientoPanel
             // 
-            this.movimientoPanel.Controls.Add(this.button4);
-            this.movimientoPanel.Controls.Add(this.button3);
-            this.movimientoPanel.Controls.Add(this.button5);
-            this.movimientoPanel.Controls.Add(this.button6);
+            this.movimientoPanel.Controls.Add(this.ventasButton);
             this.movimientoPanel.Controls.Add(this.salidasButton);
             this.movimientoPanel.Controls.Add(this.traladosButton);
             this.movimientoPanel.Controls.Add(this.devolucionesButton);
             this.movimientoPanel.Controls.Add(this.comprasButton);
             this.movimientoPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.movimientoPanel.Location = new System.Drawing.Point(0, 405);
+            this.movimientoPanel.Location = new System.Drawing.Point(0, 367);
             this.movimientoPanel.Name = "movimientoPanel";
-            this.movimientoPanel.Size = new System.Drawing.Size(200, 164);
+            this.movimientoPanel.Size = new System.Drawing.Size(200, 142);
             this.movimientoPanel.TabIndex = 4;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::Login.Properties.Resources.salidas20x20;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.Location = new System.Drawing.Point(0, 788);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(200, 23);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Salidas";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::Login.Properties.Resources.salidas20x20;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(0, 765);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(200, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Salidas";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(0, 742);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(200, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Usuario";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(0, 92);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(200, 650);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Tipo Documento";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // salidasButton
             // 
@@ -276,7 +204,7 @@
             this.salidasButton.Location = new System.Drawing.Point(0, 69);
             this.salidasButton.Name = "salidasButton";
             this.salidasButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.salidasButton.Size = new System.Drawing.Size(200, 23);
+            this.salidasButton.Size = new System.Drawing.Size(200, 32);
             this.salidasButton.TabIndex = 3;
             this.salidasButton.Text = "Salidas";
             this.salidasButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,7 +269,7 @@
             this.movimientoButton.ForeColor = System.Drawing.Color.White;
             this.movimientoButton.Image = global::Login.Properties.Resources.movimientosNegro20x20;
             this.movimientoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.movimientoButton.Location = new System.Drawing.Point(0, 376);
+            this.movimientoButton.Location = new System.Drawing.Point(0, 338);
             this.movimientoButton.Name = "movimientoButton";
             this.movimientoButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.movimientoButton.Size = new System.Drawing.Size(200, 29);
@@ -363,7 +291,7 @@
             this.archivoSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.archivoSubMenuPanel.Location = new System.Drawing.Point(0, 129);
             this.archivoSubMenuPanel.Name = "archivoSubMenuPanel";
-            this.archivoSubMenuPanel.Size = new System.Drawing.Size(200, 247);
+            this.archivoSubMenuPanel.Size = new System.Drawing.Size(200, 209);
             this.archivoSubMenuPanel.TabIndex = 2;
             // 
             // cabioClaveButton
@@ -377,7 +305,7 @@
             this.cabioClaveButton.Location = new System.Drawing.Point(0, 161);
             this.cabioClaveButton.Name = "cabioClaveButton";
             this.cabioClaveButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.cabioClaveButton.Size = new System.Drawing.Size(200, 29);
+            this.cabioClaveButton.Size = new System.Drawing.Size(200, 27);
             this.cabioClaveButton.TabIndex = 7;
             this.cabioClaveButton.Text = "Cambio Clave";
             this.cabioClaveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -510,22 +438,23 @@
             this.bodegaButton.UseVisualStyleBackColor = true;
             this.bodegaButton.Click += new System.EventHandler(this.bodegaButton_Click);
             // 
-            // servicioButton
+            // archivoButton
             // 
-            this.servicioButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.servicioButton.FlatAppearance.BorderSize = 0;
-            this.servicioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.servicioButton.ForeColor = System.Drawing.Color.White;
-            this.servicioButton.Image = global::Login.Properties.Resources.archivo2x20;
-            this.servicioButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.servicioButton.Location = new System.Drawing.Point(0, 100);
-            this.servicioButton.Name = "servicioButton";
-            this.servicioButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.servicioButton.Size = new System.Drawing.Size(200, 29);
-            this.servicioButton.TabIndex = 1;
-            this.servicioButton.Text = "Archivo";
-            this.servicioButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.servicioButton.UseVisualStyleBackColor = true;
+            this.archivoButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.archivoButton.FlatAppearance.BorderSize = 0;
+            this.archivoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.archivoButton.ForeColor = System.Drawing.Color.White;
+            this.archivoButton.Image = global::Login.Properties.Resources.archivo2x20;
+            this.archivoButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.archivoButton.Location = new System.Drawing.Point(0, 100);
+            this.archivoButton.Name = "archivoButton";
+            this.archivoButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.archivoButton.Size = new System.Drawing.Size(200, 29);
+            this.archivoButton.TabIndex = 1;
+            this.archivoButton.Text = "Archivo";
+            this.archivoButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.archivoButton.UseVisualStyleBackColor = true;
+            this.archivoButton.Click += new System.EventHandler(this.archivoButton_Click);
             // 
             // logoPanel
             // 
@@ -541,33 +470,125 @@
             this.logoPictureBox.Image = global::Login.Properties.Resources.buho_orignal_sinDonfondo_letrasBlancas;
             this.logoPictureBox.Location = new System.Drawing.Point(3, 12);
             this.logoPictureBox.Name = "logoPictureBox";
-            this.logoPictureBox.Size = new System.Drawing.Size(191, 82);
+            this.logoPictureBox.Size = new System.Drawing.Size(162, 82);
             this.logoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logoPictureBox.TabIndex = 0;
             this.logoPictureBox.TabStop = false;
+            // 
+            // slidePictureBox
+            // 
+            this.slidePictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.slidePictureBox.Image = global::Login.Properties.Resources.menu_32x32;
+            this.slidePictureBox.Location = new System.Drawing.Point(0, 3);
+            this.slidePictureBox.Name = "slidePictureBox";
+            this.slidePictureBox.Size = new System.Drawing.Size(39, 34);
+            this.slidePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.slidePictureBox.TabIndex = 0;
+            this.slidePictureBox.TabStop = false;
+            this.slidePictureBox.Click += new System.EventHandler(this.slidePictureBox_Click);
+            // 
+            // reportesButton
+            // 
+            this.reportesButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reportesButton.FlatAppearance.BorderSize = 0;
+            this.reportesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportesButton.ForeColor = System.Drawing.Color.White;
+            this.reportesButton.Image = global::Login.Properties.Resources.movimientosNegro20x20;
+            this.reportesButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.reportesButton.Location = new System.Drawing.Point(0, 509);
+            this.reportesButton.Name = "reportesButton";
+            this.reportesButton.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.reportesButton.Size = new System.Drawing.Size(200, 29);
+            this.reportesButton.TabIndex = 5;
+            this.reportesButton.Text = "Reportes";
+            this.reportesButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportesButton.UseVisualStyleBackColor = true;
+            // 
+            // reportesPanel
+            // 
+            this.reportesPanel.Controls.Add(this.button4);
+            this.reportesPanel.Controls.Add(this.inventarioButton);
+            this.reportesPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.reportesPanel.Location = new System.Drawing.Point(0, 538);
+            this.reportesPanel.Name = "reportesPanel";
+            this.reportesPanel.Size = new System.Drawing.Size(200, 124);
+            this.reportesPanel.TabIndex = 6;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Image = global::Login.Properties.Resources.devoluciones20x20;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.Location = new System.Drawing.Point(0, 23);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(200, 23);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Devoluciones";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // inventarioButton
+            // 
+            this.inventarioButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.inventarioButton.FlatAppearance.BorderSize = 0;
+            this.inventarioButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inventarioButton.ForeColor = System.Drawing.Color.White;
+            this.inventarioButton.Image = global::Login.Properties.Resources.compras_20x20;
+            this.inventarioButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.inventarioButton.Location = new System.Drawing.Point(0, 0);
+            this.inventarioButton.Name = "inventarioButton";
+            this.inventarioButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.inventarioButton.Size = new System.Drawing.Size(200, 23);
+            this.inventarioButton.TabIndex = 0;
+            this.inventarioButton.Text = "Inventario";
+            this.inventarioButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.inventarioButton.UseVisualStyleBackColor = true;
+            // 
+            // ventasButton
+            // 
+            this.ventasButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ventasButton.FlatAppearance.BorderSize = 0;
+            this.ventasButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ventasButton.ForeColor = System.Drawing.Color.White;
+            this.ventasButton.Image = global::Login.Properties.Resources.ventas_20x20;
+            this.ventasButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ventasButton.Location = new System.Drawing.Point(0, 101);
+            this.ventasButton.Name = "ventasButton";
+            this.ventasButton.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.ventasButton.Size = new System.Drawing.Size(200, 32);
+            this.ventasButton.TabIndex = 4;
+            this.ventasButton.Text = "Ventas";
+            this.ventasButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ventasButton.UseVisualStyleBackColor = true;
             // 
             // frmPrincipalMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1330, 650);
+            this.ClientSize = new System.Drawing.Size(1000, 720);
             this.Controls.Add(this.pricipalPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrincipalMDI";
             this.Text = "frmPrincipalMDI";
+            this.Load += new System.EventHandler(this.frmPrincipalMDI_Load);
             this.pricipalPanel.ResumeLayout(false);
             this.tituloPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.minimizarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.restaurarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.maximizarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).EndInit();
             this.menuVerticalPanel.ResumeLayout(false);
             this.movimientoPanel.ResumeLayout(false);
             this.archivoSubMenuPanel.ResumeLayout(false);
             this.logoPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.slidePictureBox)).EndInit();
+            this.reportesPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -579,7 +600,7 @@
         private System.Windows.Forms.Panel contenedorPanel;
         private System.Windows.Forms.Panel tituloPanel;
         private System.Windows.Forms.Panel archivoSubMenuPanel;
-        private System.Windows.Forms.Button servicioButton;
+        private System.Windows.Forms.Button archivoButton;
         private System.Windows.Forms.Panel logoPanel;
         private System.Windows.Forms.Button bodegaButton;
         private System.Windows.Forms.Button cabioClaveButton;
@@ -590,20 +611,21 @@
         private System.Windows.Forms.Button productosButton;
         private System.Windows.Forms.Button clienteButton;
         private System.Windows.Forms.Panel movimientoPanel;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button salidasButton;
         private System.Windows.Forms.Button traladosButton;
         private System.Windows.Forms.Button devolucionesButton;
         private System.Windows.Forms.Button comprasButton;
         private System.Windows.Forms.Button movimientoButton;
-        private System.Windows.Forms.PictureBox slidePictureBox;
         private System.Windows.Forms.PictureBox minimizarPictureBox;
         private System.Windows.Forms.PictureBox restaurarPictureBox;
         private System.Windows.Forms.PictureBox maximizarPictureBox;
         private System.Windows.Forms.PictureBox cerrarPictureBox;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox logoPictureBox;
+        private System.Windows.Forms.PictureBox slidePictureBox;
+        private System.Windows.Forms.Panel reportesPanel;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button inventarioButton;
+        private System.Windows.Forms.Button reportesButton;
+        private System.Windows.Forms.Button ventasButton;
     }
 }

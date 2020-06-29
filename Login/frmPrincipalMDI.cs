@@ -82,7 +82,7 @@ namespace Login
             {
                 submenu.Visible = false;
             }
-        } 
+        }
         #endregion
 
 
@@ -151,10 +151,15 @@ namespace Login
         {
             MostrarSubmenu(archivoSubMenuPanel);
         }
+        private void archivoButton_Click(object sender, EventArgs e)
+        {
+            MostrarSubmenu(archivoSubMenuPanel);
+        }
 
         private void clienteButton_Click(object sender, EventArgs e)
         {
             EsconderPanalesSubmenus();
+            AbrirFormPanelMDI(new frmCliente2());
         }
 
         private void productosButton_Click(object sender, EventArgs e)
@@ -165,6 +170,7 @@ namespace Login
         private void proveedorButton_Click(object sender, EventArgs e)
         {
             EsconderPanalesSubmenus();
+            AbrirFormPanelMDI(new frmProvedores());
         }
 
         private void tipoDocumentoButton_Click(object sender, EventArgs e)
@@ -215,29 +221,9 @@ namespace Login
             this.WindowState = FormWindowState.Minimized;
         }
 
-       
 
-        private void restaurarPictureBox_Click(object sender, EventArgs e)
-        {
-            //this.WindowState = FormWindowState.Normal;
-            this.Size = new Size(SH, SW);// sé pone como parametro el tamaña de nuestro formulario
-            this.Location = new Point(LX, LY);
-            restaurarPictureBox.Visible = false;
-            minimizarPictureBox.Visible = true;
-            maximizarPictureBox.Visible = true;
 
-        }
-
-        private void cerrarPictureBox_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Precaicion procedes a cerrar formulario", "Estas seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-
-        }
-
-        private void maximizarPictureBox_Click(object sender, EventArgs e)
+        private void maximizarPictureBox_Click_1(object sender, EventArgs e)
         {
             LX = this.Location.X;//psicion de x pantalla.
             LY = this.Location.Y; // posicion de y en la pantalla
@@ -252,11 +238,52 @@ namespace Login
             maximizarPictureBox.Visible = false;
 
         }
+
+        
+
+        private void restaurarPictureBox_Click(object sender, EventArgs e)
+        {
+            //this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(SH, SW);// sé pone como parametro el tamaña de nuestro formulario
+            this.Location = new Point(LX, LY);
+            restaurarPictureBox.Visible = false;
+            minimizarPictureBox.Visible = true;
+            maximizarPictureBox.Visible = true;
+
+        }
+
+
+        private void cerrarPictureBox_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Precaicion procedes a cerrar formulario", "Estas seguro", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
         #endregion
+
+        #region Logo
+        private void mostrarLogo()
+        {
+            AbrirFormPanelMDI(new frmLogo());
+        }
+
+        #endregion
+
+        private void frmPrincipalMDI_Load(object sender, EventArgs e)
+        {
+            mostrarLogo();
+        }
+
+
+
+
     }
-
-
 }
+
+       
+    
+
         
 
 
