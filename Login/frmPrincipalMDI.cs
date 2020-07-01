@@ -165,6 +165,7 @@ namespace Login
         private void productosButton_Click(object sender, EventArgs e)
         {
             EsconderPanalesSubmenus();
+            AbrirFormPanelMDI(new frmProductos());
         }
 
         private void proveedorButton_Click(object sender, EventArgs e)

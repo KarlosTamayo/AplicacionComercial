@@ -111,6 +111,12 @@
     <Compile Include="frmPrincipalMDI.Designer.cs">
       <DependentUpon>frmPrincipalMDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductos.Designer.cs">
+      <DependentUpon>frmProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProvedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalMDI.resx">
       <DependentUpon>frmPrincipalMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductos.resx">
+      <DependentUpon>frmProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProvedores.resx">
       <DependentUpon>frmProvedores.cs</DependentUpon>
@@ -359,6 +368,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\k.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_launcher1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalizquierda32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaizquierda32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaderecha32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechafinalderecha32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar32s32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34x34busqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardar32x32exceletne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search2 32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalizquierda32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechafinalderecha32x321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarpeque32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

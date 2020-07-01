@@ -241,6 +241,9 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.ClienteTableAdapter = this.clienteTableAdapter;
+            this.tableAdapterManager.IVATableAdapter = null;
+            this.tableAdapterManager.MedidaTableAdapter = null;
+            this.tableAdapterManager.ProductoTableAdapter = null;
             this.tableAdapterManager.ProveedorTableAdapter = null;
             this.tableAdapterManager.RolTableAdapter = null;
             this.tableAdapterManager.TipoDocumentoTableAdapter = null;
@@ -290,7 +293,7 @@
             // firstItemBindingNavigator
             // 
             this.firstItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.firstItemBindingNavigator.Image = global::Login.Properties.Resources.ic_arrow_back;
+            this.firstItemBindingNavigator.Image = global::Login.Properties.Resources.finalizquierda32x321;
             this.firstItemBindingNavigator.Name = "firstItemBindingNavigator";
             this.firstItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.firstItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -340,7 +343,7 @@
             // LastItemBindingNavigator
             // 
             this.LastItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.LastItemBindingNavigator.Image = global::Login.Properties.Resources.ic_arrow_forward;
+            this.LastItemBindingNavigator.Image = global::Login.Properties.Resources.flechafinalderecha32x321;
             this.LastItemBindingNavigator.Name = "LastItemBindingNavigator";
             this.LastItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.LastItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -365,7 +368,7 @@
             // addNewITemBindingNavigator
             // 
             this.addNewITemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.addNewITemBindingNavigator.Image = global::Login.Properties.Resources.ic_add_circle;
+            this.addNewITemBindingNavigator.Image = global::Login.Properties.Resources.agregarpeque32x32;
             this.addNewITemBindingNavigator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.addNewITemBindingNavigator.Name = "addNewITemBindingNavigator";
             this.addNewITemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -386,7 +389,7 @@
             // 
             this.saveItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.saveItemBindingNavigator.Enabled = false;
-            this.saveItemBindingNavigator.Image = global::Login.Properties.Resources.ic_save;
+            this.saveItemBindingNavigator.Image = global::Login.Properties.Resources._32x32save;
             this.saveItemBindingNavigator.Name = "saveItemBindingNavigator";
             this.saveItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.saveItemBindingNavigator.Text = "Save Data";
@@ -636,7 +639,7 @@
             this.correoTextBox.ReadOnly = true;
             this.correoTextBox.Size = new System.Drawing.Size(100, 20);
             this.correoTextBox.TabIndex = 20;
-           // 
+            // 
             // notasTextBox
             // 
             this.notasTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.clienteBindingSource, "Notas", true));

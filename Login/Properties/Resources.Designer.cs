@@ -163,6 +163,26 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32x32save {
+            get {
+                object obj = ResourceManager.GetObject("32x32save", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _34x34busqueda {
+            get {
+                object obj = ResourceManager.GetObject("34x34busqueda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aceptarinicio_32x32 {
             get {
                 object obj = ResourceManager.GetObject("aceptarinicio 32x32", resourceCulture);
@@ -186,6 +206,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap aceptarinicio_32x322 {
             get {
                 object obj = ResourceManager.GetObject("aceptarinicio 32x322", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap agregarpeque32x32 {
+            get {
+                object obj = ResourceManager.GetObject("agregarpeque32x32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +283,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancelar32x32 {
+            get {
+                object obj = ResourceManager.GetObject("cancelar32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cerrar32x32Color {
             get {
                 object obj = ResourceManager.GetObject("cerrar32x32Color", resourceCulture);
@@ -293,6 +333,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete32x32 {
+            get {
+                object obj = ResourceManager.GetObject("delete32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap devoluciones20x20 {
             get {
                 object obj = ResourceManager.GetObject("devoluciones20x20", resourceCulture);
@@ -303,9 +353,89 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editar32s32 {
+            get {
+                object obj = ResourceManager.GetObject("editar32s32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap finalizquierda32x32 {
+            get {
+                object obj = ResourceManager.GetObject("finalizquierda32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap finalizquierda32x321 {
+            get {
+                object obj = ResourceManager.GetObject("finalizquierda32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaderecha32x32 {
+            get {
+                object obj = ResourceManager.GetObject("flechaderecha32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechafinalderecha32x32 {
+            get {
+                object obj = ResourceManager.GetObject("flechafinalderecha32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechafinalderecha32x321 {
+            get {
+                object obj = ResourceManager.GetObject("flechafinalderecha32x321", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaizquierda32x32 {
+            get {
+                object obj = ResourceManager.GetObject("flechaizquierda32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gogeta {
             get {
                 object obj = ResourceManager.GetObject("gogeta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guardar32x32exceletne {
+            get {
+                object obj = ResourceManager.GetObject("guardar32x32exceletne", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +486,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap ic_launcher {
             get {
                 object obj = ResourceManager.GetObject("ic_launcher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_launcher1 {
+            get {
+                object obj = ResourceManager.GetObject("ic_launcher1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +686,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap search2_32x32 {
             get {
                 object obj = ResourceManager.GetObject("search2 32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search2_32x321 {
+            get {
+                object obj = ResourceManager.GetObject("search2 32x321", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
