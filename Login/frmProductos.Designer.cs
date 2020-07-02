@@ -38,6 +38,8 @@
             System.Windows.Forms.Label notasLabel;
             System.Windows.Forms.Label imagenLabel;
             System.Windows.Forms.Label medidaLabel;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.dSALl = new Login.DSAll.DSALl();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -62,19 +64,19 @@
             this.productoDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.iVABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.medidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDepartamentoComboBox = new System.Windows.Forms.ComboBox();
-            this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDIVAComboBox = new System.Windows.Forms.ComboBox();
-            this.iVABindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDMedidaComboBox = new System.Windows.Forms.ComboBox();
-            this.medidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.departamentoTableAdapter = new Login.DSAll.DSALlTableAdapters.DepartamentoTableAdapter();
             this.iVATableAdapter = new Login.DSAll.DSALlTableAdapters.IVATableAdapter();
             this.medidaTableAdapter = new Login.DSAll.DSALlTableAdapters.MedidaTableAdapter();
@@ -86,6 +88,28 @@
             this.medidaTextBox = new System.Windows.Forms.TextBox();
             this.buscarImagenButton = new System.Windows.Forms.Button();
             this.imagenPictureBox = new System.Windows.Forms.PictureBox();
+            this.codigoBarraGroupBox = new System.Windows.Forms.GroupBox();
+            this.eliminarButton = new System.Windows.Forms.Button();
+            this.agregarButton = new System.Windows.Forms.Button();
+            this.barraTextBox = new System.Windows.Forms.TextBox();
+            this.barraLabel = new System.Windows.Forms.Label();
+            this.barraDataGridView = new System.Windows.Forms.DataGridView();
+            this.bodegaGroupBox = new System.Windows.Forms.GroupBox();
+            this.agregarBodegaButton = new System.Windows.Forms.Button();
+            this.bodegaDataGridView = new System.Windows.Forms.DataGridView();
+            this.barraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.barraTableAdapter = new Login.DSAll.DSALlTableAdapters.BarraTableAdapter();
+            this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.barraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bodegaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bodegaProductoTableAdapter = new Login.DSAll.DSALlTableAdapters.BodegaProductoTableAdapter();
+            this.iDBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDProductoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minimoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maximoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diasReposicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadMinimaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             iDDepartamentoLabel = new System.Windows.Forms.Label();
             iDIVALabel = new System.Windows.Forms.Label();
             iDMedidaLabel = new System.Windows.Forms.Label();
@@ -104,6 +128,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medidaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenPictureBox)).BeginInit();
+            this.codigoBarraGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barraDataGridView)).BeginInit();
+            this.bodegaGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // iDDepartamentoLabel
@@ -261,7 +291,7 @@
             this.productoBindingNavigator.MovePreviousItem = this.previousItemBindingNavigator;
             this.productoBindingNavigator.Name = "productoBindingNavigator";
             this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(914, 25);
+            this.productoBindingNavigator.Size = new System.Drawing.Size(1135, 25);
             this.productoBindingNavigator.TabIndex = 0;
             this.productoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -389,6 +419,9 @@
             // 
             // productoDataGridView
             // 
+            this.productoDataGridView.AllowUserToAddRows = false;
+            this.productoDataGridView.AllowUserToDeleteRows = false;
+            this.productoDataGridView.AllowUserToOrderColumns = true;
             this.productoDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -406,65 +439,113 @@
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9});
             this.productoDataGridView.DataSource = this.productoBindingSource;
-            this.productoDataGridView.Location = new System.Drawing.Point(0, 319);
+            this.productoDataGridView.Location = new System.Drawing.Point(0, 363);
             this.productoDataGridView.Name = "productoDataGridView";
-            this.productoDataGridView.Size = new System.Drawing.Size(914, 132);
+            this.productoDataGridView.ReadOnly = true;
+            this.productoDataGridView.Size = new System.Drawing.Size(1135, 222);
             this.productoDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "IDProducto";
-            this.dataGridViewTextBoxColumn1.HeaderText = "IDProducto";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripcion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "IDDepartamento";
+            this.dataGridViewTextBoxColumn3.DataSource = this.departamentoBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "Descripcion";
             this.dataGridViewTextBoxColumn3.HeaderText = "IDDepartamento";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "IDDepartamento";
+            // 
+            // departamentoBindingSource
+            // 
+            this.departamentoBindingSource.DataMember = "Departamento";
+            this.departamentoBindingSource.DataSource = this.dSALl;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "IDIVA";
+            this.dataGridViewTextBoxColumn4.DataSource = this.iVABindingSource;
+            this.dataGridViewTextBoxColumn4.DisplayMember = "Descripcion";
             this.dataGridViewTextBoxColumn4.HeaderText = "IDIVA";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn4.ValueMember = "IDIVA";
+            // 
+            // iVABindingSource
+            // 
+            this.iVABindingSource.DataMember = "IVA";
+            this.iVABindingSource.DataSource = this.dSALl;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "Notas";
             this.dataGridViewTextBoxColumn6.HeaderText = "Notas";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "Imagen";
             this.dataGridViewTextBoxColumn7.HeaderText = "Imagen";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
             // 
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "IDMedida";
+            this.dataGridViewTextBoxColumn8.DataSource = this.medidaBindingSource;
+            this.dataGridViewTextBoxColumn8.DisplayMember = "Descripcion";
             this.dataGridViewTextBoxColumn8.HeaderText = "IDMedida";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn8.ValueMember = "IDMedida";
+            // 
+            // medidaBindingSource
+            // 
+            this.medidaBindingSource.DataMember = "Medida";
+            this.medidaBindingSource.DataSource = this.dSALl;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "Medida";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn9.HeaderText = "Medida";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // iDDepartamentoComboBox
             // 
@@ -477,11 +558,6 @@
             this.iDDepartamentoComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDDepartamentoComboBox.TabIndex = 3;
             this.iDDepartamentoComboBox.ValueMember = "IDDepartamento";
-            // 
-            // departamentoBindingSource
-            // 
-            this.departamentoBindingSource.DataMember = "Departamento";
-            this.departamentoBindingSource.DataSource = this.dSALl;
             // 
             // iDIVAComboBox
             // 
@@ -496,11 +572,6 @@
             this.iDIVAComboBox.TabIndex = 5;
             this.iDIVAComboBox.ValueMember = "IDIVA";
             // 
-            // iVABindingSource
-            // 
-            this.iVABindingSource.DataMember = "IVA";
-            this.iVABindingSource.DataSource = this.dSALl;
-            // 
             // iDMedidaComboBox
             // 
             this.iDMedidaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDMedida", true));
@@ -512,11 +583,6 @@
             this.iDMedidaComboBox.Size = new System.Drawing.Size(121, 21);
             this.iDMedidaComboBox.TabIndex = 7;
             this.iDMedidaComboBox.ValueMember = "IDMedida";
-            // 
-            // medidaBindingSource
-            // 
-            this.medidaBindingSource.DataMember = "Medida";
-            this.medidaBindingSource.DataSource = this.dSALl;
             // 
             // departamentoTableAdapter
             // 
@@ -587,23 +653,223 @@
             this.buscarImagenButton.Image = global::Login.Properties.Resources.ic_launcher1;
             this.buscarImagenButton.Location = new System.Drawing.Point(481, 133);
             this.buscarImagenButton.Name = "buscarImagenButton";
-            this.buscarImagenButton.Size = new System.Drawing.Size(75, 79);
+            this.buscarImagenButton.Size = new System.Drawing.Size(75, 66);
             this.buscarImagenButton.TabIndex = 20;
             this.buscarImagenButton.UseVisualStyleBackColor = true;
             // 
             // imagenPictureBox
             // 
-            this.imagenPictureBox.Location = new System.Drawing.Point(594, 130);
+            this.imagenPictureBox.Location = new System.Drawing.Point(562, 117);
             this.imagenPictureBox.Name = "imagenPictureBox";
-            this.imagenPictureBox.Size = new System.Drawing.Size(115, 82);
+            this.imagenPictureBox.Size = new System.Drawing.Size(115, 69);
             this.imagenPictureBox.TabIndex = 21;
             this.imagenPictureBox.TabStop = false;
+            // 
+            // codigoBarraGroupBox
+            // 
+            this.codigoBarraGroupBox.Controls.Add(this.eliminarButton);
+            this.codigoBarraGroupBox.Controls.Add(this.agregarButton);
+            this.codigoBarraGroupBox.Controls.Add(this.barraTextBox);
+            this.codigoBarraGroupBox.Controls.Add(this.barraLabel);
+            this.codigoBarraGroupBox.Controls.Add(this.barraDataGridView);
+            this.codigoBarraGroupBox.Location = new System.Drawing.Point(0, 216);
+            this.codigoBarraGroupBox.Name = "codigoBarraGroupBox";
+            this.codigoBarraGroupBox.Size = new System.Drawing.Size(392, 141);
+            this.codigoBarraGroupBox.TabIndex = 22;
+            this.codigoBarraGroupBox.TabStop = false;
+            this.codigoBarraGroupBox.Text = "Codigo Barra";
+            // 
+            // eliminarButton
+            // 
+            this.eliminarButton.FlatAppearance.BorderSize = 0;
+            this.eliminarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.eliminarButton.Image = global::Login.Properties.Resources.cancelar31x31;
+            this.eliminarButton.Location = new System.Drawing.Point(311, 13);
+            this.eliminarButton.Name = "eliminarButton";
+            this.eliminarButton.Size = new System.Drawing.Size(75, 38);
+            this.eliminarButton.TabIndex = 4;
+            this.eliminarButton.UseVisualStyleBackColor = true;
+            // 
+            // agregarButton
+            // 
+            this.agregarButton.FlatAppearance.BorderSize = 0;
+            this.agregarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarButton.Image = global::Login.Properties.Resources.agregarbueno34x34;
+            this.agregarButton.Location = new System.Drawing.Point(230, 13);
+            this.agregarButton.Name = "agregarButton";
+            this.agregarButton.Size = new System.Drawing.Size(75, 38);
+            this.agregarButton.TabIndex = 3;
+            this.agregarButton.UseVisualStyleBackColor = true;
+            // 
+            // barraTextBox
+            // 
+            this.barraTextBox.Location = new System.Drawing.Point(44, 20);
+            this.barraTextBox.Name = "barraTextBox";
+            this.barraTextBox.Size = new System.Drawing.Size(100, 20);
+            this.barraTextBox.TabIndex = 2;
+            // 
+            // barraLabel
+            // 
+            this.barraLabel.AutoSize = true;
+            this.barraLabel.Location = new System.Drawing.Point(6, 23);
+            this.barraLabel.Name = "barraLabel";
+            this.barraLabel.Size = new System.Drawing.Size(32, 13);
+            this.barraLabel.TabIndex = 1;
+            this.barraLabel.Text = "Barra";
+            this.barraLabel.Click += new System.EventHandler(this.barraLabel_Click);
+            // 
+            // barraDataGridView
+            // 
+            this.barraDataGridView.AllowUserToAddRows = false;
+            this.barraDataGridView.AllowUserToDeleteRows = false;
+            this.barraDataGridView.AllowUserToOrderColumns = true;
+            this.barraDataGridView.AutoGenerateColumns = false;
+            this.barraDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.barraDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDProductoDataGridViewTextBoxColumn,
+            this.barraDataGridViewTextBoxColumn});
+            this.barraDataGridView.DataSource = this.barraBindingSource;
+            this.barraDataGridView.Location = new System.Drawing.Point(6, 57);
+            this.barraDataGridView.Name = "barraDataGridView";
+            this.barraDataGridView.ReadOnly = true;
+            this.barraDataGridView.Size = new System.Drawing.Size(386, 78);
+            this.barraDataGridView.TabIndex = 0;
+            // 
+            // bodegaGroupBox
+            // 
+            this.bodegaGroupBox.Controls.Add(this.agregarBodegaButton);
+            this.bodegaGroupBox.Controls.Add(this.bodegaDataGridView);
+            this.bodegaGroupBox.Location = new System.Drawing.Point(435, 216);
+            this.bodegaGroupBox.Name = "bodegaGroupBox";
+            this.bodegaGroupBox.Size = new System.Drawing.Size(616, 141);
+            this.bodegaGroupBox.TabIndex = 23;
+            this.bodegaGroupBox.TabStop = false;
+            this.bodegaGroupBox.Text = "Bodegas";
+            // 
+            // agregarBodegaButton
+            // 
+            this.agregarBodegaButton.FlatAppearance.BorderSize = 0;
+            this.agregarBodegaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.agregarBodegaButton.Image = global::Login.Properties.Resources.agregarbueno34x341;
+            this.agregarBodegaButton.Location = new System.Drawing.Point(535, 13);
+            this.agregarBodegaButton.Name = "agregarBodegaButton";
+            this.agregarBodegaButton.Size = new System.Drawing.Size(75, 38);
+            this.agregarBodegaButton.TabIndex = 1;
+            this.agregarBodegaButton.UseVisualStyleBackColor = true;
+            // 
+            // bodegaDataGridView
+            // 
+            this.bodegaDataGridView.AllowUserToAddRows = false;
+            this.bodegaDataGridView.AllowUserToDeleteRows = false;
+            this.bodegaDataGridView.AllowUserToOrderColumns = true;
+            this.bodegaDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bodegaDataGridView.AutoGenerateColumns = false;
+            this.bodegaDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.bodegaDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDBodegaDataGridViewTextBoxColumn,
+            this.iDProductoDataGridViewTextBoxColumn1,
+            this.stockDataGridViewTextBoxColumn,
+            this.minimoDataGridViewTextBoxColumn,
+            this.maximoDataGridViewTextBoxColumn,
+            this.diasReposicionDataGridViewTextBoxColumn,
+            this.cantidadMinimaDataGridViewTextBoxColumn});
+            this.bodegaDataGridView.DataSource = this.bodegaProductoBindingSource;
+            this.bodegaDataGridView.Location = new System.Drawing.Point(0, 57);
+            this.bodegaDataGridView.Name = "bodegaDataGridView";
+            this.bodegaDataGridView.ReadOnly = true;
+            this.bodegaDataGridView.Size = new System.Drawing.Size(610, 72);
+            this.bodegaDataGridView.TabIndex = 0;
+            // 
+            // barraBindingSource
+            // 
+            this.barraBindingSource.DataMember = "Barra";
+            this.barraBindingSource.DataSource = this.dSALl;
+            // 
+            // barraTableAdapter
+            // 
+            this.barraTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDProductoDataGridViewTextBoxColumn
+            // 
+            this.iDProductoDataGridViewTextBoxColumn.DataPropertyName = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn.HeaderText = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn.Name = "iDProductoDataGridViewTextBoxColumn";
+            this.iDProductoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // barraDataGridViewTextBoxColumn
+            // 
+            this.barraDataGridViewTextBoxColumn.DataPropertyName = "Barra";
+            this.barraDataGridViewTextBoxColumn.HeaderText = "Barra";
+            this.barraDataGridViewTextBoxColumn.Name = "barraDataGridViewTextBoxColumn";
+            this.barraDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // bodegaProductoBindingSource
+            // 
+            this.bodegaProductoBindingSource.DataMember = "BodegaProducto";
+            this.bodegaProductoBindingSource.DataSource = this.dSALl;
+            // 
+            // bodegaProductoTableAdapter
+            // 
+            this.bodegaProductoTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDBodegaDataGridViewTextBoxColumn
+            // 
+            this.iDBodegaDataGridViewTextBoxColumn.DataPropertyName = "IDBodega";
+            this.iDBodegaDataGridViewTextBoxColumn.HeaderText = "IDBodega";
+            this.iDBodegaDataGridViewTextBoxColumn.Name = "iDBodegaDataGridViewTextBoxColumn";
+            this.iDBodegaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // iDProductoDataGridViewTextBoxColumn1
+            // 
+            this.iDProductoDataGridViewTextBoxColumn1.DataPropertyName = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn1.HeaderText = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn1.Name = "iDProductoDataGridViewTextBoxColumn1";
+            this.iDProductoDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // stockDataGridViewTextBoxColumn
+            // 
+            this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
+            this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
+            this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            this.stockDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // minimoDataGridViewTextBoxColumn
+            // 
+            this.minimoDataGridViewTextBoxColumn.DataPropertyName = "Minimo";
+            this.minimoDataGridViewTextBoxColumn.HeaderText = "Minimo";
+            this.minimoDataGridViewTextBoxColumn.Name = "minimoDataGridViewTextBoxColumn";
+            this.minimoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maximoDataGridViewTextBoxColumn
+            // 
+            this.maximoDataGridViewTextBoxColumn.DataPropertyName = "Maximo";
+            this.maximoDataGridViewTextBoxColumn.HeaderText = "Maximo";
+            this.maximoDataGridViewTextBoxColumn.Name = "maximoDataGridViewTextBoxColumn";
+            this.maximoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diasReposicionDataGridViewTextBoxColumn
+            // 
+            this.diasReposicionDataGridViewTextBoxColumn.DataPropertyName = "DiasReposicion";
+            this.diasReposicionDataGridViewTextBoxColumn.HeaderText = "DiasReposicion";
+            this.diasReposicionDataGridViewTextBoxColumn.Name = "diasReposicionDataGridViewTextBoxColumn";
+            this.diasReposicionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cantidadMinimaDataGridViewTextBoxColumn
+            // 
+            this.cantidadMinimaDataGridViewTextBoxColumn.DataPropertyName = "CantidadMinima";
+            this.cantidadMinimaDataGridViewTextBoxColumn.HeaderText = "CantidadMinima";
+            this.cantidadMinimaDataGridViewTextBoxColumn.Name = "cantidadMinimaDataGridViewTextBoxColumn";
+            this.cantidadMinimaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 597);
+            this.ClientSize = new System.Drawing.Size(1135, 597);
+            this.Controls.Add(this.bodegaGroupBox);
+            this.Controls.Add(this.codigoBarraGroupBox);
             this.Controls.Add(this.imagenPictureBox);
             this.Controls.Add(this.buscarImagenButton);
             this.Controls.Add(medidaLabel);
@@ -640,6 +906,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.iVABindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medidaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imagenPictureBox)).EndInit();
+            this.codigoBarraGroupBox.ResumeLayout(false);
+            this.codigoBarraGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barraDataGridView)).EndInit();
+            this.bodegaGroupBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -665,15 +938,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton deleteItemBindingNavigator;
         private System.Windows.Forms.DataGridView productoDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.ComboBox iDDepartamentoComboBox;
         private System.Windows.Forms.ComboBox iDIVAComboBox;
         private System.Windows.Forms.ComboBox iDMedidaComboBox;
@@ -694,5 +958,36 @@
         private System.Windows.Forms.ToolStripButton saveItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton cancelItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton searchBindingNavigator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.GroupBox codigoBarraGroupBox;
+        private System.Windows.Forms.TextBox barraTextBox;
+        private System.Windows.Forms.Label barraLabel;
+        private System.Windows.Forms.DataGridView barraDataGridView;
+        private System.Windows.Forms.Button eliminarButton;
+        private System.Windows.Forms.Button agregarButton;
+        private System.Windows.Forms.GroupBox bodegaGroupBox;
+        private System.Windows.Forms.Button agregarBodegaButton;
+        private System.Windows.Forms.DataGridView bodegaDataGridView;
+        private System.Windows.Forms.BindingSource barraBindingSource;
+        private DSAll.DSALlTableAdapters.BarraTableAdapter barraTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource bodegaProductoBindingSource;
+        private DSAll.DSALlTableAdapters.BodegaProductoTableAdapter bodegaProductoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDBodegaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minimoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maximoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diasReposicionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadMinimaDataGridViewTextBoxColumn;
     }
 }

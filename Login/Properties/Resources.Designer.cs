@@ -133,6 +133,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _32x32cerrar3 {
+            get {
+                object obj = ResourceManager.GetObject("32x32cerrar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _32x32minimizarColor {
             get {
                 object obj = ResourceManager.GetObject("32x32minimizarColor", resourceCulture);
@@ -213,6 +223,26 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregarbueno34x34 {
+            get {
+                object obj = ResourceManager.GetObject("agregarbueno34x34", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap agregarbueno34x341 {
+            get {
+                object obj = ResourceManager.GetObject("agregarbueno34x341", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregarpeque32x32 {
             get {
                 object obj = ResourceManager.GetObject("agregarpeque32x32", resourceCulture);
@@ -276,6 +306,16 @@ namespace Login.Properties {
         internal static System.Drawing.Bitmap canbioUsuario20x20 {
             get {
                 object obj = ResourceManager.GetObject("canbioUsuario20x20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cancelar31x31 {
+            get {
+                object obj = ResourceManager.GetObject("cancelar31x31", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -414,5 +414,17 @@
   <ItemGroup>
     <None Include="Resources\32x32save.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarbueno34x34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32x32cerrar3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar31x31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarbueno34x341.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
