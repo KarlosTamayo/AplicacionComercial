@@ -275,7 +275,7 @@
             // firstItemBindingNavigator
             // 
             this.firstItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.firstItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("firstItemBindingNavigator.Image")));
+            this.firstItemBindingNavigator.Image = global::Login.Properties.Resources.finalizquierda32x321;
             this.firstItemBindingNavigator.Name = "firstItemBindingNavigator";
             this.firstItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.firstItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -285,7 +285,7 @@
             // previousItemBindingNavigator
             // 
             this.previousItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.previousItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("previousItemBindingNavigator.Image")));
+            this.previousItemBindingNavigator.Image = global::Login.Properties.Resources.flechaizquierda32x32;
             this.previousItemBindingNavigator.Name = "previousItemBindingNavigator";
             this.previousItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.previousItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -301,7 +301,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -315,7 +314,7 @@
             // nextItemBindingNavigator
             // 
             this.nextItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.nextItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("nextItemBindingNavigator.Image")));
+            this.nextItemBindingNavigator.Image = global::Login.Properties.Resources.flechaderecha32x32;
             this.nextItemBindingNavigator.Name = "nextItemBindingNavigator";
             this.nextItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.nextItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -325,7 +324,7 @@
             // lastItemBindingNavigator
             // 
             this.lastItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.lastItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("lastItemBindingNavigator.Image")));
+            this.lastItemBindingNavigator.Image = global::Login.Properties.Resources.flechafinalderecha32x32;
             this.lastItemBindingNavigator.Name = "lastItemBindingNavigator";
             this.lastItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.lastItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -340,7 +339,7 @@
             // editItemBindingNavigator
             // 
             this.editItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.editItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("editItemBindingNavigator.Image")));
+            this.editItemBindingNavigator.Image = global::Login.Properties.Resources.editar32s32;
             this.editItemBindingNavigator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.editItemBindingNavigator.Name = "editItemBindingNavigator";
             this.editItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -350,7 +349,7 @@
             // addNewITembindingNavigator
             // 
             this.addNewITembindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.addNewITembindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("addNewITembindingNavigator.Image")));
+            this.addNewITembindingNavigator.Image = global::Login.Properties.Resources.agregarbueno34x341;
             this.addNewITembindingNavigator.Name = "addNewITembindingNavigator";
             this.addNewITembindingNavigator.RightToLeftAutoMirrorImage = true;
             this.addNewITembindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -360,7 +359,7 @@
             // deleteItemBindingNavigator
             // 
             this.deleteItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.deleteItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("deleteItemBindingNavigator.Image")));
+            this.deleteItemBindingNavigator.Image = global::Login.Properties.Resources.delete32x32;
             this.deleteItemBindingNavigator.Name = "deleteItemBindingNavigator";
             this.deleteItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.deleteItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -371,7 +370,7 @@
             // 
             this.saveItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.saveItemBindingNavigator.Enabled = false;
-            this.saveItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("saveItemBindingNavigator.Image")));
+            this.saveItemBindingNavigator.Image = global::Login.Properties.Resources.guardar32x32exceletne;
             this.saveItemBindingNavigator.Name = "saveItemBindingNavigator";
             this.saveItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.saveItemBindingNavigator.Text = "Save Data";
@@ -381,7 +380,7 @@
             // 
             this.cancelItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.cancelItemBindingNavigator.Enabled = false;
-            this.cancelItemBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("cancelItemBindingNavigator.Image")));
+            this.cancelItemBindingNavigator.Image = global::Login.Properties.Resources.cancelar32x32;
             this.cancelItemBindingNavigator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cancelItemBindingNavigator.Name = "cancelItemBindingNavigator";
             this.cancelItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -393,7 +392,7 @@
             // searchBindingNavigator
             // 
             this.searchBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.searchBindingNavigator.Image = ((System.Drawing.Image)(resources.GetObject("searchBindingNavigator.Image")));
+            this.searchBindingNavigator.Image = global::Login.Properties.Resources.search2_32x32;
             this.searchBindingNavigator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.searchBindingNavigator.Name = "searchBindingNavigator";
             this.searchBindingNavigator.Size = new System.Drawing.Size(23, 22);
@@ -664,6 +663,7 @@
             this.Controls.Add(this.iDTipoDocumentoComboBox);
             this.Controls.Add(this.proveedorDataGridView);
             this.Controls.Add(this.proveedorBindingNavigator);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmProvedores";
             this.Text = "frmProvedores";
             this.Load += new System.EventHandler(this.frmProvedores_Load);

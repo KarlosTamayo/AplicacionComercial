@@ -393,6 +393,16 @@ namespace Login.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ediblue32x32 {
+            get {
+                object obj = ResourceManager.GetObject("ediblue32x32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap editar32s32 {
             get {
                 object obj = ResourceManager.GetObject("editar32s32", resourceCulture);

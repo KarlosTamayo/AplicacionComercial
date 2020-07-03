@@ -124,11 +124,17 @@
   <data name="ic_arrow_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_arrow_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cerrar32x32transparante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar32x32transparante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="32x32save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\32x32save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ic_search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ic_search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="buhoLogoOriginal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\buhoLogoOriginal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bodegaNegro20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bodegaNegro20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,11 +148,11 @@
   <data name="restaurar32x32transparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurar32x32transparente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancelar32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancelar32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="editar32s32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\editar32s32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="agregarbueno34x34" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregarbueno34x34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="34x34busqueda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\34x34busqueda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,11 +172,14 @@
   <data name="256x256_login" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\256x256_login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="finalizquierda32x321" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\finalizquierda32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="256256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\256256.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="buhoLogoOriginal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\buhoLogoOriginal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editar32s32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\editar32s32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar32x32Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar32x32Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,8 +214,8 @@
   <data name="buho-orignal-sinDonfondo-letrasBlancas" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\buho-orignal-sinDonfondo-letrasBlancas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="finalizquierda32x321" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\finalizquierda32x321.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usuario20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,6 +243,9 @@
   </data>
   <data name="aceptarinicio 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aceptarinicio 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregarbueno34x341" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregarbueno34x341.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="32x32minimizarTransparente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\32x32minimizarTransparente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,17 +286,8 @@
   <data name="provedor20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\provedor20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="32x32cerrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32x32cerrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="restaurar32x32Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\restaurar32x32Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="canbioUsuario20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\canbioUsuario20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cancelar32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancelar32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="refresch1 32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresch1 32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -310,8 +313,8 @@
   <data name="32x32cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\32x32cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregarbueno34x34" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregarbueno34x34.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="restaurar32x32Color" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restaurar32x32Color.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizar20x20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizar20x20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -319,8 +322,8 @@
   <data name="aceptarinicio 32x322" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\aceptarinicio 32x322.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar32x32transparante" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar32x32transparante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="32x32cerrar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32x32cerrar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="agregarpeque32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregarpeque32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -331,7 +334,7 @@
   <data name="20x20_cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\20x20_cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregarbueno34x341" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregarbueno34x341.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ediblue32x32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ediblue32x32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

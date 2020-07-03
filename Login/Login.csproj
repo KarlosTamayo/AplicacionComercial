@@ -426,5 +426,8 @@
   <ItemGroup>
     <None Include="Resources\agregarbueno34x341.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ediblue32x32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

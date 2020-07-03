@@ -40,6 +40,12 @@
             System.Windows.Forms.Label medidaLabel;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
             this.dSALl = new Login.DSAll.DSALl();
             this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -62,18 +68,9 @@
             this.cancelItemBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.searchBindingNavigator = new System.Windows.Forms.ToolStripButton();
             this.productoDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.departamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.iVABindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.medidaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDepartamentoComboBox = new System.Windows.Forms.ComboBox();
             this.iDIVAComboBox = new System.Windows.Forms.ComboBox();
             this.iDMedidaComboBox = new System.Windows.Forms.ComboBox();
@@ -94,22 +91,35 @@
             this.barraTextBox = new System.Windows.Forms.TextBox();
             this.barraLabel = new System.Windows.Forms.Label();
             this.barraDataGridView = new System.Windows.Forms.DataGridView();
+            this.barraBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bodegaGroupBox = new System.Windows.Forms.GroupBox();
             this.agregarBodegaButton = new System.Windows.Forms.Button();
             this.bodegaDataGridView = new System.Windows.Forms.DataGridView();
-            this.barraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bodegaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barraTableAdapter = new Login.DSAll.DSALlTableAdapters.BarraTableAdapter();
+            this.bodegaProductoTableAdapter = new Login.DSAll.DSALlTableAdapters.BodegaProductoTableAdapter();
             this.iDProductoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.barraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bodegaProductoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bodegaProductoTableAdapter = new Login.DSAll.DSALlTableAdapters.BodegaProductoTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDBodegaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDProductoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDProductoDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.minimoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maximoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diasReposicionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadMinimaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.iDProductoToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.iDProductoToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             iDDepartamentoLabel = new System.Windows.Forms.Label();
             iDIVALabel = new System.Windows.Forms.Label();
             iDMedidaLabel = new System.Windows.Forms.Label();
@@ -130,10 +140,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.imagenPictureBox)).BeginInit();
             this.codigoBarraGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barraDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barraBindingSource)).BeginInit();
             this.bodegaGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barraBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // iDDepartamentoLabel
@@ -291,7 +302,7 @@
             this.productoBindingNavigator.MovePreviousItem = this.previousItemBindingNavigator;
             this.productoBindingNavigator.Name = "productoBindingNavigator";
             this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(1135, 25);
+            this.productoBindingNavigator.Size = new System.Drawing.Size(1175, 25);
             this.productoBindingNavigator.TabIndex = 0;
             this.productoBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -328,6 +339,7 @@
             this.firstItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.firstItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.firstItemBindingNavigator.Text = "Move first";
+            this.firstItemBindingNavigator.Click += new System.EventHandler(this.firstItemBindingNavigator_Click);
             // 
             // previousItemBindingNavigator
             // 
@@ -337,6 +349,7 @@
             this.previousItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.previousItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.previousItemBindingNavigator.Text = "Move previous";
+            this.previousItemBindingNavigator.Click += new System.EventHandler(this.previousItemBindingNavigator_Click);
             // 
             // bindingNavigatorSeparator
             // 
@@ -366,6 +379,7 @@
             this.NextItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.NextItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.NextItemBindingNavigator.Text = "Move next";
+            this.NextItemBindingNavigator.Click += new System.EventHandler(this.NextItemBindingNavigator_Click);
             // 
             // LastItemBindingNavigator
             // 
@@ -375,6 +389,7 @@
             this.LastItemBindingNavigator.RightToLeftAutoMirrorImage = true;
             this.LastItemBindingNavigator.Size = new System.Drawing.Size(23, 22);
             this.LastItemBindingNavigator.Text = "Move last";
+            this.LastItemBindingNavigator.Click += new System.EventHandler(this.LastItemBindingNavigator_Click);
             // 
             // bindingNavigatorSeparator2
             // 
@@ -393,6 +408,7 @@
             // saveItemBindingNavigator
             // 
             this.saveItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.saveItemBindingNavigator.Enabled = false;
             this.saveItemBindingNavigator.Image = global::Login.Properties.Resources.guardar32x32exceletne;
             this.saveItemBindingNavigator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveItemBindingNavigator.Name = "saveItemBindingNavigator";
@@ -402,6 +418,7 @@
             // cancelItemBindingNavigator
             // 
             this.cancelItemBindingNavigator.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.cancelItemBindingNavigator.Enabled = false;
             this.cancelItemBindingNavigator.Image = global::Login.Properties.Resources.cancelar32x32;
             this.cancelItemBindingNavigator.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.cancelItemBindingNavigator.Name = "cancelItemBindingNavigator";
@@ -442,116 +459,30 @@
             this.productoDataGridView.Location = new System.Drawing.Point(0, 363);
             this.productoDataGridView.Name = "productoDataGridView";
             this.productoDataGridView.ReadOnly = true;
-            this.productoDataGridView.Size = new System.Drawing.Size(1135, 222);
+            this.productoDataGridView.Size = new System.Drawing.Size(1175, 238);
             this.productoDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDProducto";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "IDDepartamento";
-            this.dataGridViewTextBoxColumn3.DataSource = this.departamentoBindingSource;
-            this.dataGridViewTextBoxColumn3.DisplayMember = "Descripcion";
-            this.dataGridViewTextBoxColumn3.HeaderText = "IDDepartamento";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn3.ValueMember = "IDDepartamento";
             // 
             // departamentoBindingSource
             // 
             this.departamentoBindingSource.DataMember = "Departamento";
             this.departamentoBindingSource.DataSource = this.dSALl;
             // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "IDIVA";
-            this.dataGridViewTextBoxColumn4.DataSource = this.iVABindingSource;
-            this.dataGridViewTextBoxColumn4.DisplayMember = "Descripcion";
-            this.dataGridViewTextBoxColumn4.HeaderText = "IDIVA";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn4.ValueMember = "IDIVA";
-            // 
             // iVABindingSource
             // 
             this.iVABindingSource.DataMember = "IVA";
             this.iVABindingSource.DataSource = this.dSALl;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle1.Format = "C2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Notas";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Notas";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Imagen";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Imagen";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "IDMedida";
-            this.dataGridViewTextBoxColumn8.DataSource = this.medidaBindingSource;
-            this.dataGridViewTextBoxColumn8.DisplayMember = "Descripcion";
-            this.dataGridViewTextBoxColumn8.HeaderText = "IDMedida";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn8.ValueMember = "IDMedida";
             // 
             // medidaBindingSource
             // 
             this.medidaBindingSource.DataMember = "Medida";
             this.medidaBindingSource.DataSource = this.dSALl;
             // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Medida";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn9.HeaderText = "Medida";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
             // iDDepartamentoComboBox
             // 
             this.iDDepartamentoComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDDepartamento", true));
             this.iDDepartamentoComboBox.DataSource = this.departamentoBindingSource;
             this.iDDepartamentoComboBox.DisplayMember = "Descripcion";
+            this.iDDepartamentoComboBox.Enabled = false;
             this.iDDepartamentoComboBox.FormattingEnabled = true;
             this.iDDepartamentoComboBox.Location = new System.Drawing.Point(109, 54);
             this.iDDepartamentoComboBox.Name = "iDDepartamentoComboBox";
@@ -565,6 +496,7 @@
             this.iDIVAComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDIVA", true));
             this.iDIVAComboBox.DataSource = this.iVABindingSource;
             this.iDIVAComboBox.DisplayMember = "Descripcion";
+            this.iDIVAComboBox.Enabled = false;
             this.iDIVAComboBox.FormattingEnabled = true;
             this.iDIVAComboBox.Location = new System.Drawing.Point(435, 54);
             this.iDIVAComboBox.Name = "iDIVAComboBox";
@@ -577,6 +509,7 @@
             this.iDMedidaComboBox.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.productoBindingSource, "IDMedida", true));
             this.iDMedidaComboBox.DataSource = this.medidaBindingSource;
             this.iDMedidaComboBox.DisplayMember = "Descripcion";
+            this.iDMedidaComboBox.Enabled = false;
             this.iDMedidaComboBox.FormattingEnabled = true;
             this.iDMedidaComboBox.Location = new System.Drawing.Point(724, 49);
             this.iDMedidaComboBox.Name = "iDMedidaComboBox";
@@ -601,6 +534,7 @@
             this.iDProductoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "IDProducto", true));
             this.iDProductoTextBox.Location = new System.Drawing.Point(109, 81);
             this.iDProductoTextBox.Name = "iDProductoTextBox";
+            this.iDProductoTextBox.ReadOnly = true;
             this.iDProductoTextBox.Size = new System.Drawing.Size(121, 20);
             this.iDProductoTextBox.TabIndex = 9;
             // 
@@ -609,6 +543,7 @@
             this.precioTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Precio", true));
             this.precioTextBox.Location = new System.Drawing.Point(109, 107);
             this.precioTextBox.Name = "precioTextBox";
+            this.precioTextBox.ReadOnly = true;
             this.precioTextBox.Size = new System.Drawing.Size(121, 20);
             this.precioTextBox.TabIndex = 11;
             // 
@@ -617,6 +552,7 @@
             this.descripcionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Descripcion", true));
             this.descripcionTextBox.Location = new System.Drawing.Point(435, 78);
             this.descripcionTextBox.Name = "descripcionTextBox";
+            this.descripcionTextBox.ReadOnly = true;
             this.descripcionTextBox.Size = new System.Drawing.Size(121, 20);
             this.descripcionTextBox.TabIndex = 13;
             // 
@@ -626,6 +562,7 @@
             this.notasTextBox.Location = new System.Drawing.Point(109, 133);
             this.notasTextBox.Multiline = true;
             this.notasTextBox.Name = "notasTextBox";
+            this.notasTextBox.ReadOnly = true;
             this.notasTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.notasTextBox.Size = new System.Drawing.Size(329, 53);
             this.notasTextBox.TabIndex = 15;
@@ -635,6 +572,7 @@
             this.imagenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Imagen", true));
             this.imagenTextBox.Location = new System.Drawing.Point(435, 107);
             this.imagenTextBox.Name = "imagenTextBox";
+            this.imagenTextBox.ReadOnly = true;
             this.imagenTextBox.Size = new System.Drawing.Size(121, 20);
             this.imagenTextBox.TabIndex = 17;
             // 
@@ -643,11 +581,13 @@
             this.medidaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.productoBindingSource, "Medida", true));
             this.medidaTextBox.Location = new System.Drawing.Point(724, 84);
             this.medidaTextBox.Name = "medidaTextBox";
+            this.medidaTextBox.ReadOnly = true;
             this.medidaTextBox.Size = new System.Drawing.Size(121, 20);
             this.medidaTextBox.TabIndex = 19;
             // 
             // buscarImagenButton
             // 
+            this.buscarImagenButton.Enabled = false;
             this.buscarImagenButton.FlatAppearance.BorderSize = 0;
             this.buscarImagenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buscarImagenButton.Image = global::Login.Properties.Resources.ic_launcher1;
@@ -716,14 +656,17 @@
             this.barraLabel.Size = new System.Drawing.Size(32, 13);
             this.barraLabel.TabIndex = 1;
             this.barraLabel.Text = "Barra";
-            this.barraLabel.Click += new System.EventHandler(this.barraLabel_Click);
             // 
             // barraDataGridView
             // 
             this.barraDataGridView.AllowUserToAddRows = false;
             this.barraDataGridView.AllowUserToDeleteRows = false;
             this.barraDataGridView.AllowUserToOrderColumns = true;
+            this.barraDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.barraDataGridView.AutoGenerateColumns = false;
+            this.barraDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.barraDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.barraDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDProductoDataGridViewTextBoxColumn,
@@ -735,19 +678,25 @@
             this.barraDataGridView.Size = new System.Drawing.Size(386, 78);
             this.barraDataGridView.TabIndex = 0;
             // 
+            // barraBindingSource
+            // 
+            this.barraBindingSource.DataMember = "Barra";
+            this.barraBindingSource.DataSource = this.dSALl;
+            // 
             // bodegaGroupBox
             // 
             this.bodegaGroupBox.Controls.Add(this.agregarBodegaButton);
             this.bodegaGroupBox.Controls.Add(this.bodegaDataGridView);
             this.bodegaGroupBox.Location = new System.Drawing.Point(435, 216);
             this.bodegaGroupBox.Name = "bodegaGroupBox";
-            this.bodegaGroupBox.Size = new System.Drawing.Size(616, 141);
+            this.bodegaGroupBox.Size = new System.Drawing.Size(720, 141);
             this.bodegaGroupBox.TabIndex = 23;
             this.bodegaGroupBox.TabStop = false;
             this.bodegaGroupBox.Text = "Bodegas";
             // 
             // agregarBodegaButton
             // 
+            this.agregarBodegaButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.agregarBodegaButton.FlatAppearance.BorderSize = 0;
             this.agregarBodegaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregarBodegaButton.Image = global::Login.Properties.Resources.agregarbueno34x341;
@@ -779,22 +728,27 @@
             this.bodegaDataGridView.Location = new System.Drawing.Point(0, 57);
             this.bodegaDataGridView.Name = "bodegaDataGridView";
             this.bodegaDataGridView.ReadOnly = true;
-            this.bodegaDataGridView.Size = new System.Drawing.Size(610, 72);
+            this.bodegaDataGridView.Size = new System.Drawing.Size(714, 72);
             this.bodegaDataGridView.TabIndex = 0;
             // 
-            // barraBindingSource
+            // bodegaProductoBindingSource
             // 
-            this.barraBindingSource.DataMember = "Barra";
-            this.barraBindingSource.DataSource = this.dSALl;
+            this.bodegaProductoBindingSource.DataMember = "BodegaProducto";
+            this.bodegaProductoBindingSource.DataSource = this.dSALl;
+            this.bodegaProductoBindingSource.CurrentChanged += new System.EventHandler(this.bodegaProductoBindingSource_CurrentChanged);
             // 
             // barraTableAdapter
             // 
             this.barraTableAdapter.ClearBeforeFill = true;
             // 
+            // bodegaProductoTableAdapter
+            // 
+            this.bodegaProductoTableAdapter.ClearBeforeFill = true;
+            // 
             // iDProductoDataGridViewTextBoxColumn
             // 
             this.iDProductoDataGridViewTextBoxColumn.DataPropertyName = "IDProducto";
-            this.iDProductoDataGridViewTextBoxColumn.HeaderText = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn.HeaderText = "ID Producto";
             this.iDProductoDataGridViewTextBoxColumn.Name = "iDProductoDataGridViewTextBoxColumn";
             this.iDProductoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -805,32 +759,124 @@
             this.barraDataGridViewTextBoxColumn.Name = "barraDataGridViewTextBoxColumn";
             this.barraDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // bodegaProductoBindingSource
+            // dataGridViewTextBoxColumn1
             // 
-            this.bodegaProductoBindingSource.DataMember = "BodegaProducto";
-            this.bodegaProductoBindingSource.DataSource = this.dSALl;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IDProducto";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
-            // bodegaProductoTableAdapter
+            // dataGridViewTextBoxColumn2
             // 
-            this.bodegaProductoTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Descripcion";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Descripción";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "IDDepartamento";
+            this.dataGridViewTextBoxColumn3.DataSource = this.departamentoBindingSource;
+            this.dataGridViewTextBoxColumn3.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ID Departamento";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn3.ValueMember = "IDDepartamento";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "IDIVA";
+            this.dataGridViewTextBoxColumn4.DataSource = this.iVABindingSource;
+            this.dataGridViewTextBoxColumn4.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn4.HeaderText = "ID IVA";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn4.ValueMember = "IDIVA";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Precio";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Precio";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Notas";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Notas";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Imagen";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Imagen";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "IDMedida";
+            this.dataGridViewTextBoxColumn8.DataSource = this.medidaBindingSource;
+            this.dataGridViewTextBoxColumn8.DisplayMember = "Descripcion";
+            this.dataGridViewTextBoxColumn8.HeaderText = "ID Medida";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn8.ValueMember = "IDMedida";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Medida";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Medida";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             // 
             // iDBodegaDataGridViewTextBoxColumn
             // 
             this.iDBodegaDataGridViewTextBoxColumn.DataPropertyName = "IDBodega";
-            this.iDBodegaDataGridViewTextBoxColumn.HeaderText = "IDBodega";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.iDBodegaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            this.iDBodegaDataGridViewTextBoxColumn.HeaderText = "ID Bodega";
             this.iDBodegaDataGridViewTextBoxColumn.Name = "iDBodegaDataGridViewTextBoxColumn";
             this.iDBodegaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // iDProductoDataGridViewTextBoxColumn1
             // 
             this.iDProductoDataGridViewTextBoxColumn1.DataPropertyName = "IDProducto";
-            this.iDProductoDataGridViewTextBoxColumn1.HeaderText = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn1.DataSource = this.productoBindingSource;
+            this.iDProductoDataGridViewTextBoxColumn1.DisplayMember = "Descripcion";
+            this.iDProductoDataGridViewTextBoxColumn1.HeaderText = "ID Producto";
             this.iDProductoDataGridViewTextBoxColumn1.Name = "iDProductoDataGridViewTextBoxColumn1";
             this.iDProductoDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.iDProductoDataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.iDProductoDataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.iDProductoDataGridViewTextBoxColumn1.ValueMember = "IDProducto";
+            this.iDProductoDataGridViewTextBoxColumn1.Visible = false;
             // 
             // stockDataGridViewTextBoxColumn
             // 
             this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.stockDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
             this.stockDataGridViewTextBoxColumn.HeaderText = "Stock";
             this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
             this.stockDataGridViewTextBoxColumn.ReadOnly = true;
@@ -838,36 +884,85 @@
             // minimoDataGridViewTextBoxColumn
             // 
             this.minimoDataGridViewTextBoxColumn.DataPropertyName = "Minimo";
-            this.minimoDataGridViewTextBoxColumn.HeaderText = "Minimo";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.minimoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.minimoDataGridViewTextBoxColumn.HeaderText = "Mínimo";
             this.minimoDataGridViewTextBoxColumn.Name = "minimoDataGridViewTextBoxColumn";
             this.minimoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // maximoDataGridViewTextBoxColumn
             // 
             this.maximoDataGridViewTextBoxColumn.DataPropertyName = "Maximo";
-            this.maximoDataGridViewTextBoxColumn.HeaderText = "Maximo";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.maximoDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            this.maximoDataGridViewTextBoxColumn.HeaderText = "Máximo";
             this.maximoDataGridViewTextBoxColumn.Name = "maximoDataGridViewTextBoxColumn";
             this.maximoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // diasReposicionDataGridViewTextBoxColumn
             // 
             this.diasReposicionDataGridViewTextBoxColumn.DataPropertyName = "DiasReposicion";
-            this.diasReposicionDataGridViewTextBoxColumn.HeaderText = "DiasReposicion";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N2";
+            dataGridViewCellStyle7.NullValue = null;
+            this.diasReposicionDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.diasReposicionDataGridViewTextBoxColumn.HeaderText = "Días Reposición";
             this.diasReposicionDataGridViewTextBoxColumn.Name = "diasReposicionDataGridViewTextBoxColumn";
             this.diasReposicionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cantidadMinimaDataGridViewTextBoxColumn
             // 
             this.cantidadMinimaDataGridViewTextBoxColumn.DataPropertyName = "CantidadMinima";
-            this.cantidadMinimaDataGridViewTextBoxColumn.HeaderText = "CantidadMinima";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle8.Format = "N2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.cantidadMinimaDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.cantidadMinimaDataGridViewTextBoxColumn.HeaderText = "Cantidad Minima";
             this.cantidadMinimaDataGridViewTextBoxColumn.Name = "cantidadMinimaDataGridViewTextBoxColumn";
             this.cantidadMinimaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iDProductoToolStripLabel,
+            this.iDProductoToolStripTextBox,
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 25);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(1175, 25);
+            this.fillByToolStrip.TabIndex = 24;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // iDProductoToolStripLabel
+            // 
+            this.iDProductoToolStripLabel.Name = "iDProductoToolStripLabel";
+            this.iDProductoToolStripLabel.Size = new System.Drawing.Size(70, 22);
+            this.iDProductoToolStripLabel.Text = "IDProducto:";
+            // 
+            // iDProductoToolStripTextBox
+            // 
+            this.iDProductoToolStripTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.iDProductoToolStripTextBox.Name = "iDProductoToolStripTextBox";
+            this.iDProductoToolStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 22);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
             // 
             // frmProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 597);
+            this.ClientSize = new System.Drawing.Size(1175, 613);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.bodegaGroupBox);
             this.Controls.Add(this.codigoBarraGroupBox);
             this.Controls.Add(this.imagenPictureBox);
@@ -909,10 +1004,12 @@
             this.codigoBarraGroupBox.ResumeLayout(false);
             this.codigoBarraGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.barraDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barraBindingSource)).EndInit();
             this.bodegaGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bodegaDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.barraBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bodegaProductoBindingSource)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -958,15 +1055,6 @@
         private System.Windows.Forms.ToolStripButton saveItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton cancelItemBindingNavigator;
         private System.Windows.Forms.ToolStripButton searchBindingNavigator;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.GroupBox codigoBarraGroupBox;
         private System.Windows.Forms.TextBox barraTextBox;
         private System.Windows.Forms.Label barraLabel;
@@ -978,16 +1066,29 @@
         private System.Windows.Forms.DataGridView bodegaDataGridView;
         private System.Windows.Forms.BindingSource barraBindingSource;
         private DSAll.DSALlTableAdapters.BarraTableAdapter barraTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn barraDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource bodegaProductoBindingSource;
         private DSAll.DSALlTableAdapters.BodegaProductoTableAdapter bodegaProductoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn barraDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDBodegaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDProductoDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn iDProductoDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn minimoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maximoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn diasReposicionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadMinimaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripLabel iDProductoToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox iDProductoToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }
